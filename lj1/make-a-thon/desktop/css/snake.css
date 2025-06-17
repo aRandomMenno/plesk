@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "Windows95";
+    src: url(../media/fonts/w95fa.woff2);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #c3c7cb; /* Windows 95 grijze achtergrondkleur */
+    margin: 0;
+    font-family: "Windows95", sans-serif; /* Retro lettertype */
+    color: black;
+    overflow: hidden; /* Voorkom scrollen */
+    cursor: url(../../assets/cursors/arrow.cur), default; /* Retro cursor */
+}
+
+button {
+    cursor: url(../../assets/cursors/hand.png), pointer; /* Retro cursor */
+}
+
+i {
+    font-size: 28px; /* Kleinere tekst om ruimte te besparen */
+    text-align: center;
+    margin-bottom: 10px; /* Minder marge */
+    color: black; /* Zwarte tekst voor retrostijl */
+    cursor: url(../../assets/cursors/hand.png), pointer; /* Retro cursor */
+}
+
+#gameContainer {
+    text-align: center;
+    background-color: #e0e0e0; /* Lichtgrijze achtergrond */
+    border: 2px solid #808080; /* Donkergrijze rand */
+    box-shadow: 2px 2px 0 #ffffff, -2px -2px 0 #000000; /* 3D-effect */
+    padding: 10px; /* Minder padding om ruimte te besparen */
+    border-radius: 4px; /* Optioneel: lichte afronding */
+}
+
+#gameBoard {
+    border: 2px solid #000000; /* Zwarte rand */
+    background-color: #ffffff; /* Witte achtergrond */
+    margin-bottom: 10px; /* Minder marge */
+    box-shadow: inset 2px 2px 0 #808080, inset -2px -2px 0 #ffffff; /* Ingeperst 3D-effect */
+    width: 90vw; /* Dynamische breedte (90% van viewport) */
+    height: 90vw; /* Dynamische hoogte (vierkant) */
+    max-width: 500px; /* Maximale breedte */
+    max-height: 500px; /* Maximale hoogte */
+}
+
+#scoreText {
+    font-size: 30px; /* Kleinere tekst om ruimte te besparen */
+    margin: 5px 0; /* Minder marge */
+    color: black;
+    text-shadow: 1px 1px 0 #ffffff; /* Licht schaduweffect */
+}
+
+#levelText {
+    font-size: 20px; /* Kleinere tekst om ruimte te besparen */
+    margin: 5px 0; /* Minder marge */
+    color: black;
+    text-shadow: 1px 1px 0 #ffffff; /* Licht schaduweffect */
+}
+
+#resetBtn, #startBtn {
+    display: inline-block;
+    padding: 5px 10px; /* Kleinere padding om ruimte te besparen */
+    margin: 5px; /* Minder marge */
+    font-size: 14px; /* Kleinere tekst om ruimte te besparen */
+    width: 100px;
+    height: 35px; /* Kleinere knop om ruimte te besparen */
+    border: 2px solid #808080; /* Donkergrijze rand */
+    background-color: #e0e0e0; /* Lichtgrijze achtergrond */
+    color: black;
+    box-shadow: 2px 2px 0 #ffffff, -2px -2px 0 #000000; /* 3D-effect */
+    text-align: center;
+}
+
+#resetBtn:active, #startBtn:active {
+    box-shadow: inset 2px 2px 0 #808080, inset -2px -2px 0 #ffffff; /* Ingeperst effect bij klikken */
+    background-color: #c3c7cb; /* Donkerdere achtergrond bij klikken */
+}

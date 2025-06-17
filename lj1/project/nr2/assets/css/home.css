@@ -1,0 +1,31 @@
+
+main {
+    padding-top: 10vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+}
+
+img {
+    width: 26vw;
+    height: auto;
+    border-radius: 1vh;
+    transition: scale 500ms ease;
+}
+
+img:hover {
+    scale: 1.03;
+}
+
+.artistic {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

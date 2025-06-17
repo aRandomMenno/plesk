@@ -1,0 +1,59 @@
+
+html {
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffffff;
+    width: 100%;
+    background-image: url(../img/water.gif);
+}
+
+body {
+    justify-content: center;
+    display: flex;
+    font-weight: 600;
+}
+
+.container {
+    margin: 24px; 
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1280px;
+    background-color: #536dff;
+    border: 7px #eeff00 solid;
+    border-radius: 32px;
+}
+
+.lessen {
+    width: 85vw;
+    max-width: 1100px;
+    padding: 8px;
+}
+
+h1 {
+    font-size: 48px;
+    padding-left: 16px;
+}
+
+h2 {
+    font-size: 32px;
+    padding-bottom: 8px; 
+    padding-left: 16px;
+    border-bottom: #eeff00 4.5px solid;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 500ms ease-in-out;
+    text-shadow: 3px 3px 3px #3c4fff;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #26ff00;
+}
+
+#info {
+    padding-left: 24px;
+}

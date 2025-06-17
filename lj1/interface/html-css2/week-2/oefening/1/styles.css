@@ -1,0 +1,50 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#top-bar {
+    width: 100%;
+    background-color: #292929;
+    text-align: center;
+}
+
+#top-image {
+    width: 100%;
+    height: auto;
+}
+
+#home, #about, #contact {
+    scroll-margin-top: 100px;
+}
+
+header {
+    position: sticky;
+    top: 16px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo {
+    width: 96px;
+    height: auto;
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    border-radius: 128px;
+    background-color: #ff4c4c;
+}
+
+#menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.text {
+    padding: 20px;
+}

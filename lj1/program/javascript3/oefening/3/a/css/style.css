@@ -1,0 +1,15 @@
+button#knop1 {
+    background-color: #00ff00;
+}
+
+.zelda {
+    width: 960px;
+    height: auto;
+}
+
+#uitvoerveld {
+    margin-top: -100px;
+    font-size: 48px;
+    margin-left: 100px;
+    color: white;
+}

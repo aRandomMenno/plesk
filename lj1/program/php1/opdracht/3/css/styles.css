@@ -1,0 +1,78 @@
+.student-card {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+}
+
+.student-info {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.grades-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.grades-table th,
+.grades-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.average {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: right;
+}
+
+.back-link {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: red;
+}
+
+.grade-green {
+    color: green;
+}
+
+.grade-red {
+    color: red;
+}
+
+#hoofdmenu {
+    margin-bottom: 60px;
+}
+
+.records-container {
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.record-card {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.timestamp {
+    color: #888;
+    font-size: 0.9em;
+    text-align: right;
+}
+
+h1,
+h2 {
+    margin-bottom: 20px;
+}

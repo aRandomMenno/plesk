@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'right';
+    font-weight: 400;
+    src: url(../fonts/righteous.ttf);
+}
+
+:root {
+    /* Background colours */
+    --color-background: #4fb6ff;
+    --color-foreground: #0e5776;
+
+    /* Text colours */
+    --color-text: #fff;
+    --color-link: #08bb26;
+    --color-link_hover: #00b7ff;
+    --color-navbar_selected: #2e77ff;
+
+    --color-header-2-1: #41ffc3;
+}
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    transition: all 700ms ease;
+    cursor: grab;
+}
+
+a:hover {
+    color: var(--color-link_hover);
+}
+
+a:active {
+    cursor: grabbing;
+}
+
+h1, h2 {
+    color: var(--color-header-2-1);
+    font-weight: 700;
+}
+
+html {
+    font-family: 'right';
+    font-size: 1.2rem;
+    line-height: 1.4;
+    letter-spacing: 0.015rem;
+    color: var(--color-text);
+    font-weight: 500;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-background);
+    box-sizing: border-box;
+}
+
+.week-wrapper, .inf {
+    background-color: var(--color-foreground);
+    padding: 12px;
+    margin: 32px;
+    border: 3px #000 solid;
+    border-radius: 20px;
+    padding: 32px;
+}
+
+.week-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.week {
+    width: 24%;
+}

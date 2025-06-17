@@ -1,0 +1,17 @@
+.toekomst {
+    color: #3f47ad;
+}
+
+.beweging {
+    color: #fc7341;
+}
+
+@media (prefers-color-scheme: dark) {
+    .toekomst {
+        color: #2d50db;
+    }
+    .beweging {
+        color: #c9361c;
+    }
+}
+

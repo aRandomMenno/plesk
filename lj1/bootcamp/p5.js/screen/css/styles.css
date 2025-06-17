@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'kode mono';
+    src: url(../font/kode-mono.ttf);
+    font-weight: 700;
+}
+
+body {
+    font-family: 'kode mono', monospace;
+    padding: 0;
+    margin: 0;
+    background-color: #2e2e2e;
+    color: #fff;
+
+    width: 1080px;
+    height: 1920px;
+} 
+
+.color-picker {
+    color: #ffffffcc;
+}

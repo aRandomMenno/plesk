@@ -1,0 +1,30 @@
+body {
+    padding: 48px;
+}
+
+#title {
+    background-color: rgb(78, 78, 78);
+    width: fit-content;
+    padding: 8px;
+}
+
+#parent-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+p {
+    background-color: rgb(78, 78, 78);
+    padding: 8px;
+    width: 30%;
+    height: fit-content;
+    overflow: auto;
+}

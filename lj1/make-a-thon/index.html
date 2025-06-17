@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="shortcut icon" href="./assets/media/favicon.ico" type="image/x-icon">
+        <title>GooberOS terminal</title>
+    </head>
+
+    <body>
+        <label for="commandInput">
+            <div class="terminal-main">
+                <div id="outputs">
+                    <!-- The outputs from the commands will be displayed here. -->
+                </div>
+                <div class="command-line" id="command-line">
+                    <span id="path"></span><input type="text" autocomplete="off" id="commandInput" autofocus>
+                </div>
+            </div>
+        </label>
+        <script src="./assets/js/fileStruct.js"></script>
+        <script src="./assets/js/terminal.js" defer></script>
+    </body>
+</html>

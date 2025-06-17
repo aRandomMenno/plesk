@@ -1,0 +1,7 @@
+.coloured_div {
+    border: 1px solid #ffffff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 12px;
+    transition: all 0.5s ease;
+}

@@ -1,0 +1,43 @@
+html {                font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+div {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.red {
+    color: #ff0000;
+}
+
+.yellow {
+    color: #ffff00
+}
+
+.blue {
+    color: #0000ff;
+}
+.groter {
+    font-size: 30px;
+}

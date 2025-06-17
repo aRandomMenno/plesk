@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht 1.2</title>
+    <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mijn Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projecten">Projecten</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="py-5">
+        <div class="container">
+            <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="bg-primary text-white text-center py-5">
+                            <h1>Welkom bij Mijn Portfolio</h1>
+                            <p class="lead">Ontdek mijn projecten en vaardigheden</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="bg-secondary text-white text-center py-5">
+                            <h1>Creatieve Oplossingen</h1>
+                            <p class="lead">Innovatieve webdesign en ontwikkeling</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="bg-success text-white text-center py-5">
+                            <h1>Professionele Kwaliteit</h1>
+                            <p class="lead">Hoogwaardige resultaten voor elke klant</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="projecten" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Mijn Projecten</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Website Project 1</h5>
+                            <p class="card-text">Een moderne website gebouwd met HTML, CSS en JavaScript.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal">
+                                Meer Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">E-commerce Platform</h5>
+                            <p class="card-text">Een volledig functioneel online winkelplatform.</p>
+                            <button type="button" class="btn btn-success">Bekijk Live</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Mobile App Design</h5>
+                            <p class="card-text">UI/UX design voor een mobiele applicatie.</p>
+                            <button type="button" class="btn btn-outline-primary">Portfolio</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <button type="button" class="btn btn-lg btn-primary me-3">Alle Projecten</button>
+                <button type="button" class="btn btn-lg btn-outline-secondary">Download CV</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-center mb-5">Contact</h2>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="voornaam" class="form-label">Voornaam</label>
+                                <input type="text" class="form-control" id="voornaam" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="achternaam" class="form-label">Achternaam</label>
+                                <input type="text" class="form-control" id="achternaam" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mailadres</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="onderwerp" class="form-label">Onderwerp</label>
+                            <select class="form-select" id="onderwerp">
+                                <option selected>Kies een onderwerp...</option>
+                                <option value="project">Nieuw Project</option>
+                                <option value="samenwerking">Samenwerking</option>
+                                <option value="vraag">Algemene Vraag</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="bericht" class="form-label">Bericht</label>
+                            <textarea class="form-control" id="bericht" rows="5" required></textarea>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="privacy">
+                            <label class="form-check-label" for="privacy">
+                                Ik ga akkoord met de privacyvoorwaarden
+                            </label>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">Verstuur Bericht</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="projectModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Website Project 1 - Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Projectbeschrijving</h6>
+                    <p>Dit project betreft een moderne responsieve website die is ontwikkeld met de nieuwste webtechnologieën. De website bevat een gebruiksvriendelijke interface en is geoptimaliseerd voor verschillende apparaten.</p>
+                    <h6>Gebruikte Technologieën</h6>
+                    <ul>
+                        <li>HTML5 &amp; CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>Bootstrap Framework</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                    <h6>Projectduur</h6>
+                    <p>3 weken (Maart 2024)</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sluiten</button>
+                    <button type="button" class="btn btn-primary">Bekijk Live Demo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Mijn Portfolio. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

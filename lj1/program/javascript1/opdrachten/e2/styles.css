@@ -1,0 +1,50 @@
+/* Dark mode styles */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+}
+
+fieldset {
+    border: 3px solid #939393;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+legend {
+    color: #bb86fc;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 8px;
+}
+
+label {
+    color: #e0e0e0;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+input[type="text"]::placeholder {
+    color: #888;
+}
+
+#resterend_budget {
+    font-weight: bold;
+    color: #bb86fc;
+}

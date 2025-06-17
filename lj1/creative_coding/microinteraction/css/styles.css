@@ -1,0 +1,228 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333447;
+    --frame-border: #ff3131;
+    --tile-bg: #3172ff;
+    --tile-infected: #39ff64;
+    --block-color: #ff6b31;
+    --switch-bg: #ff6b31;
+    --switch-inside: #fff;
+    --slider-bg: #ddd;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --frame-border: #ff6b31;
+    --tile-bg: #004db3;
+    --tile-infected: #00ca2c;
+    --block-color: #ff3131;
+    --switch-bg: #3172ff;
+    --switch-inside: #1a1a1a;
+    --slider-bg: #555;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    transition: background-color 0.5s ease;
+}
+
+* {
+    font-family: 'Lato', Helvetica, sans-serif;
+    color: var(--text-color);
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+.no_wide {
+    margin: 0 auto;
+    min-height: 100vh;
+    max-width: 1280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.frame {
+    border: 4px solid var(--frame-border);
+    border-radius: 16px;
+    padding: 12px;
+    height: 45vh;
+    transition: border-color 0.3s ease;
+}
+
+#irritant div {
+    width: 60px;
+    height: 60px;
+    background-color: var(--block-color);
+    border-radius: 50%;
+    position: relative;
+    animation: irritatie 7s infinite alternate;
+    animation-timing-function: steps(1);
+}
+
+.switch-thing {
+    cursor: pointer;
+    background-color: var(--switch-bg);
+    width: 240px;
+    height: 120px;
+    padding: 10px;
+    border-radius: 80px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.5s ease;
+}
+
+.switch {
+    background-color: var(--switch-inside);
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    padding: 10px;
+    transition: background-color 0.5s ease;
+}
+
+.switcher {
+    background-color: var(--switch-bg);
+    height: 100%;
+    width: 80px;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out, background-color 0.5s ease;
+}
+
+.switch.on .switcher {
+    transform: translateX(120px);
+}
+
+#ontspannend {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#ontspannend .block {
+    width: 200px;
+    height: 200px;
+    background-color: var(--block-color);
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease, background-color 0.5s ease;
+}
+
+.slider-vertical {
+    position: absolute;
+    right: 20px;
+    top: 10%;
+    height: 80%;
+    width: 10px;
+    background-color: var(--slider-bg);
+    border-radius: 5px;
+    transition: background-color 0.5s ease;
+}
+
+.slider-vertical-knob {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--block-color);
+    border-radius: 50%;
+    left: -5px;
+    top: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.slider-vertical-knob:hover {
+    background-color: var(--frame-border);
+}
+
+.slider-horizontal {
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+    width: 80%;
+    height: 10px;
+    background-color: var(--slider-bg);
+    border-radius: 5px;
+    transition: background-color 0.5s ease;
+}
+
+.slider-horizontal-knob {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--block-color);
+    border-radius: 50%;
+    left: 50%;
+    top: -5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.slider-horizontal-knob:hover {
+    background-color: var(--frame-border);
+}
+
+.tile {
+    background-color: var(--tile-bg);
+    height: 22px;
+    border-radius: 50%;
+    transition: background-color 0.5s ease;
+}
+
+.infected {
+    background-color: var(--tile-infected);
+}
+
+.theme-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 15px;
+}
+
+.theme-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.theme-label:first-child {
+    opacity: 0.7;
+}
+
+.theme-label:last-child {
+    opacity: 0.7;
+}
+
+[data-theme="light"] .theme-label:first-child {
+    opacity: 1;
+}
+
+[data-theme="dark"] .theme-label:last-child {
+    opacity: 1;
+}
+
+.switch-thing {
+    margin: 0;
+    top: 0;
+    transform: none;
+}

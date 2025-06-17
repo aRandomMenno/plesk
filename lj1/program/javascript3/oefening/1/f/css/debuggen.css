@@ -1,0 +1,7 @@
+input {
+    margin-bottom: 5px;
+}
+
+input:not(#button) {
+    width: 100px;
+}

@@ -1,0 +1,73 @@
+.content {
+    gap: 24px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 80%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 2px solid #8d8d8d;
+    border-radius: 4px;
+    color: #001263;
+    font-size: 1rem;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+input[type="checkbox"] {
+    width: 32px;
+    height: 32px;
+    accent-color: #001263;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #001263;
+    border: 2px solid #001263;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+#buy-album {
+    width: 100%;
+}
+
+label {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+b {
+    font-size: 1.1rem;
+}
+
+#home {
+    color: #fff;
+}
+
+#contact {
+    color: #ff68d2;
+}
+
+.title {
+    text-align: center;
+}
+
+.p {
+    font-size: 1.2rem;
+}

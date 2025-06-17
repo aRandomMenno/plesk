@@ -1,0 +1,578 @@
+body,
+html {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'windows';
+    background-color: rgb(0, 130, 130);
+    cursor: url(../../assets/cursors/arrow.cur), auto;
+}
+
+/* #background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+} */
+
+.shortcut {
+    width: 150px;
+    padding-top: 1px;
+    margin-left: 5px;
+    cursor: url(../../assets/cursors/hand.png), auto;
+}
+
+.shortcut:hover {
+    outline: 2px solid rgb(80, 80, 80);
+}
+
+.icon {
+    width: 150px;
+    height: 75px;
+    object-fit: cover
+}
+
+/* .icon2 {
+    width: 65px;
+    height: 65px;
+    margin-left: 45px;
+}
+
+.icon3 {
+    width: 80px;
+    margin-left: 40px;
+} */
+
+.icon-text {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 150px;
+    text-align: center;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 50px;
+    background-color: rgb(196, 196, 196);
+    color: white;
+    text-align: center;
+    line-height: 25px;
+    border-top: 1px solid black;
+}
+
+#start-button {
+    position: absolute;
+    border: 3px solid black;
+    width: 100px;
+    height: 40px;
+    bottom: 5px;
+    left: 2px;
+    background-color: rgb(196, 196, 196);
+    cursor: url(../../assets/cursors/hand.png), auto;
+}
+
+.footerimg {
+    position: absolute;
+    bottom: -23px;
+    left: -20px;
+    width: auto;
+    height: 80px;
+}
+
+.button-text {
+    position: absolute;
+    color: black;
+    font-family: 'windows';
+    font-size: 20px;
+    bottom: -12px;
+    left: 50px;
+}
+
+#search {
+    position: absolute;
+    width: 200px;
+    height: 35px;
+    bottom: 5px;
+    left: 105px;
+    background-color: rgb(241, 241, 241);
+    font-family: 'windows';
+    font-size: 15px;
+    cursor: url(../../assets/cursors/ibeam.cur), auto;
+}
+
+#intractable {
+    cursor: url(../../assets/cursors/hand.png), auto;
+
+}
+
+#search:focus {
+    outline: none;
+}
+
+#time {
+    position: absolute;
+    right: 2px;
+    bottom: -13px;
+    color: black;
+    border: 1px solid gray;
+    background-color: rgb(186, 186, 186);
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+@font-face {
+    font-family: 'windows';
+    src: url(../media/fonts/w95fa.woff2);
+}
+
+a {
+    cursor: url(../../assets/cursors/hand.png), auto;
+    color: black;
+    text-decoration: none;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    left: 2px;
+    bottom: 52px;
+    width: 300px;
+    height: 354px;
+    background-color: rgb(196, 196, 196);
+    border: 2px solid black;
+    z-index: 1;
+}
+
+#intractable {
+    cursor: url(../../assets/cursors/hand.png), pointer;
+}
+
+.popup>p {
+    margin: 0px;
+    padding: 16px
+}
+
+.popup>p:hover {
+    background-color: rgb(0, 0, 176);
+}
+
+.popup>hr {
+    border: 1px solid black;
+}
+
+.popup>p#disable-gui {
+    padding: 0px;
+}
+
+.popup>p>a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 16px;
+}
+
+.subsubpop1>p>a,
+.subsubpop2>p>a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.subpop1 {
+    display: none;
+    position: absolute;
+    left: 305px;
+    bottom: 220px;
+    width: 200px;
+    height: 186px;
+    background-color: rgb(196, 196, 196);
+    border: 2px solid black;
+    z-index: 1;
+}
+
+.subpop1>p,
+.subpop2>p {
+    margin: 0px;
+    padding: 8px
+}
+
+.subpop1>p:hover,
+.subpop2>p:hover {
+    background-color: rgb(0, 0, 176);
+}
+
+.subpop1>p>a
+.subpop2>p>a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.subpop2 {
+    display: none;
+    position: absolute;
+    left: 305px;
+    bottom: 202px;
+    width: 200px;
+    height: 155px;
+    background-color: rgb(196, 196, 196);
+    border: 2px solid black;
+    z-index: 1;
+}
+
+.subpop2>p {
+    margin: 0px;
+    padding: 8px
+}
+
+.subpop2>p:hover {
+    background-color: rgb(0, 0, 176);
+}
+
+.subpop3 {
+    display: none;
+    position: absolute;
+    left: 305px;
+    bottom: 168px;
+    width: 200px;
+    height: 142px;
+    background-color: rgb(196, 196, 196);
+    border: 2px solid black;
+    z-index: 1;
+}
+
+.subpop3>p {
+    margin: 0px;
+    padding: 8px
+}
+
+.subpop3>p:hover {
+    background-color: rgb(0, 0, 176);
+}
+
+.subpop3>hr {
+    border: 1px solid black;
+}
+
+.subsubpop1 {
+    display: none;
+    position: absolute;
+    left: 507px;
+    bottom: 256px;
+    width: 200px;
+    height: 150px;
+    background-color: rgb(196, 196, 196);
+    border: 2px solid black;
+    z-index: 1;
+}
+
+.subsubpop1>p {
+    margin: 0px;
+    padding: 5px
+}
+
+.subsubpop1>p:hover {
+    background-color: rgb(0, 0, 176);
+}
+
+
+.subsubpop2 {
+    display: none;
+    position: absolute;
+    left: 507px;
+    bottom: 298px;
+    width: 200px;
+    height: 75px;
+    background-color: rgb(196, 196, 196);
+    border: 2px solid black;
+    z-index: 1;
+}
+
+.subsubpop2>p {
+    margin: 0px;
+    padding: 5px
+}
+
+.subsubpop2>p:hover {
+    background-color: rgb(0, 0, 176);
+}
+
+.charactermap {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 50vw;
+    background-color: rgb(196, 196, 196);
+    border: 2px solid black;
+    z-index: 0;
+}
+
+.charactermap-header {
+    background-color: rgb(0, 0, 176);
+    padding: 5px;
+    margin-bottom: 1.5vh;
+}
+
+.charactermap-header>label {
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: 'windows';
+}
+
+button {
+    cursor: url(../../assets/cursors/hand.png), auto;
+}
+
+.charactermap-header>button {
+    padding: 0px;
+    font-family: "windows";
+}
+
+#minimize-charactermap {
+    position: absolute;
+    right: 55px;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+#maximize-charactermap {
+    position: absolute;
+    right: 30px;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#close-charactermap {
+    position: absolute;
+    right: 5px;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+.character {
+    width: 8%;
+    height: 5.5vh;
+    margin-left: 1.45%;
+    margin-bottom: 1.5%;
+    background-color: rgb(241, 241, 241);
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+
+.adres {
+    display: none;
+    position: absolute;
+    right: 300px;
+    top: 30px;
+    width: 40vw;
+    background-color: rgb(196, 196, 196);
+    border: 2px solid black;
+    z-index: 0;
+}
+
+.adres-header {
+    background-color: rgb(0, 0, 176);
+    padding: 5px;
+    margin-bottom: 1.5vh;
+}
+
+.adres-header>label {
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: 'windows';
+}
+
+.adres-header > button{
+    padding: 0px;
+    font-family: "windows";
+}
+
+#minimize-adres {
+    position: absolute;
+    right: 55px;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+#maximize-adres {
+    position: absolute;
+    right: 30px;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#close-adres {
+    position: absolute;
+    right: 5px;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+.adresdiv{
+    min-width: 234px;
+    width: 30%;
+    min-height: 100px;
+    margin-left: 1.45%;
+    margin-bottom: 1.5%;
+    background-color: rgb(241, 241, 241);
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+
+
+.bin {
+    display: none;
+    position: absolute;
+    right: 250px;
+    top: 5px;
+    width: 40vw;
+    background-color: rgb(196, 196, 196);
+    border: 2px solid black;
+    z-index: 0;
+    text-align: center;
+}
+
+.bin-header {
+    background-color: rgb(0, 0, 176);
+    padding: 5px;
+    margin-bottom: 1.5vh;
+}
+
+.bin-header>label {
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: 'windows';
+}
+
+.bin-header > button{
+    padding: 0px;
+    font-family: "windows";
+}
+
+#minimize-bin {
+    position: absolute;
+    right: 55px;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+#maximize-bin {
+    position: absolute;
+    right: 30px;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#close-bin {
+    position: absolute;
+    right: 5px;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+
+.network {
+    display: none;
+    position: absolute;
+    right: 600px;
+    top: 20px;
+    width: 40vw;
+    background-color: rgb(196, 196, 196);
+    border: 2px solid black;
+    z-index: 0;
+    text-align: center;
+}
+
+.network-header {
+    background-color: rgb(0, 0, 176);
+    padding: 5px;
+    margin-bottom: 1.5vh;
+}
+
+.network-header>label {
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: 'windows';
+}
+
+.network-header > button{
+    padding: 0px;
+    font-family: "windows";
+}
+
+#minimize-network {
+    position: absolute;
+    right: 55px;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+#maximize-network {
+    position: absolute;
+    right: 30px;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#close-network {
+    position: absolute;
+    right: 5px;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}

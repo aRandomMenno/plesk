@@ -1,0 +1,61 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+}
+
+html {
+    padding: 32px;
+}
+
+legend {
+    padding: 0 20px;
+    margin: 0 40px;
+}
+
+fieldset {
+    border: 5px solid rgb(165, 163, 255);
+    border-radius: 24px;
+}
+
+label {
+    width: 400px;
+    display: inline-block;
+    text-align: right;
+    font-weight: 500;
+    margin-right: 30px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="submit"],
+select {
+    width: 400px;
+    height: 1.2rem;
+    padding: 6px 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 3px rgb(165, 163, 255) solid;
+    font-weight: 500;
+    background-color: #292929;
+    color: #fff;
+}
+
+select,
+input[type="submit"] {
+    height: 2rem;
+    width: 426px;
+    text-align: left;
+}
+
+input[name="huisnummer"] {
+    width: 200px;
+}
+
+input[type="submit"]:hover {
+    border: 3px rgb(21, 255, 0) solid;
+    cursor: pointer;
+}

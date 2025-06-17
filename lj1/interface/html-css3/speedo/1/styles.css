@@ -1,0 +1,14 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #2e2e2e;
+}
+
+#square {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+}

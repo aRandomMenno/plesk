@@ -1,0 +1,38 @@
+#result {
+    color: rgb(0, 160, 0);
+    overflow: auto;
+    padding: 32px;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 900;
+}
+
+.stam {
+    color: rgb(160,75,25);
+}
+
+ks {
+    color: rgb(0, 115, 255);
+    animation: kerst 5s infinite;
+}
+
+@keyframes kerst {
+    0% {
+        color: rgb(0, 115, 255);
+    }
+    30% {
+        color: rgb(255, 0, 191);
+    }
+    70% {
+        color: rgb(255, 115, 0);
+    }
+    100% {
+        color: rgb(0, 115, 255);
+    } 
+    
+}
+
+.container {
+    max-width: 100%;
+    margin: 16px;
+}

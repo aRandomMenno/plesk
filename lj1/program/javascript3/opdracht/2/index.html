@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Winkelwagentje</title>
+        <script type="text/javascript" src="js/winkelwagentje.js"></script>
+        <link href="css/winkelwagentje.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="winkel">
+            <h2>Uw groentespecialist</h2>
+            <form>
+                <table>
+                    <tr>
+                        <th>Product</th>
+                        <th>Omschrijving</th>
+                        <th>&nbsp;</th>
+                        <th>Aantal</th>
+                        <th>Prijs</th>
+                    </tr>
+
+                    <!-- ! APPELS -->
+                    <tr>
+                        <td><img src="images/appel.jpg"></td>
+
+                        <td class="omschrijving"><h3>&euro; 1</h3><br>Sappiger kan gewoon niet!<br>Lorem ipsum
+                            dolor sit amet, consectetur adipiscing elit. Suspendisse id sem mollis, tincidunt
+                            risus sed, vulputate risus.</td>
+                        <td>
+                            <input type="button" onclick="shop('appel', '+', 1)" value="+">
+                            <input type="button" onclick="shop('appel', '-', 1)" value="-">
+                        </td>
+                        <td>
+                            <input type="text" id="totaal_appel"
+                                onkeydown="return event.keyCode !== 69 && event.keyCode !== 189 && event.keyCode !== 190"
+                                oninput="this.value = this.value.replace(/[^0-9]/g, ''); shop('appel', '#', '0');"
+                                min="0"
+                                step="1">
+                        </td>
+                        <td><input type="text" id="totaalPrijs_appel" readonly></td>
+                    </tr>
+
+                    <!-- ! PEREN -->
+                    <tr>
+                        <td><img src="images/peer.jpg"></td>
+
+                        <td class="omschrijving"><h3>&euro; 2</h3><br>Vooral lekker als ijsje!<br>Nulla eget
+                            erat orci. Maecenas blandit lacus sed risus efficitur ultricies. Quisque ornare
+                            massa non congue congue</td>
+                        <td>
+                            <input type="button" onclick="shop('peer', '+', 1)" value="+">
+                            <input type="button" onclick="shop('peer', '-', 1)" value="-">
+                        </td>
+                        <td>
+                            <input type="text" id="totaal_peer"
+                                onkeydown="return event.keyCode !== 69 && event.keyCode !== 189 && event.keyCode !== 190"
+                                oninput="this.value = this.value.replace(/[^0-9]/g, ''); shop('peer', '#', '0');"
+                                min="0"
+                                step="1">
+                        </td>
+                        <td><input type="text" id="totaalPrijs_peer" readonly></td>
+                    </tr>
+
+                    <!-- ! BANANEN -->
+                    <tr>
+                        <td><img src="images/banaan.jpeg"></td>
+                        <td class="omschrijving"><h3>&euro; 3</h3><br>Mooi krom en geel!<br>Duis vel sem
+                            lacus. Fusce efficitur suscipit ultrices. Etiam ullamcorper laoreet justo</td>
+                        <td>
+                            <input type="button" onclick="shop('banaan', '+', 1)" value="+">
+                            <input type="button" onclick="shop('banaan', '-', 1)" value="-">
+                        </td>
+                        <td>
+                            <input
+                                type="text"
+                                id="totaal_banaan"
+                                onkeydown="return event.keyCode !== 69 && event.keyCode !== 189 && event.keyCode !== 190"
+                                oninput="this.value = this.value.replace(/[^0-9]/g, ''); shop('banaan', '#', '0');"
+                                min="0"
+                                step="1">
+                        </td>
+                        <td><input type="text" id="totaalPrijs_banaan" readonly></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" align="right">
+                            <input type="button" onclick="shop('totaal', '*', 0)"
+                                value="Bereken totaalprijs"
+                                class="totaalbutton">
+                        </td>
+                        <td><input type="text" id="totaalPrijs"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

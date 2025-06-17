@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Swanky+and+Moo+Moo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Kode+Mono:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Kode+Mono:wght@400..700&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color-background-content: #7c0057;
+    --color-background: rgb(39, 14, 68);
+    --color-background-button: #ff00b3;
+    --color-background-button-hover: #ff4dff;
+    --color-text-content: #001263;
+    --color-text-content-background: #ffe9f8;
+    --color-text: #fff;
+    --color-text-nav-hover: #ff68d2;
+}
+
+html {
+    font-family: "Bruno Ace", sans-serif;
+    font-size: 1rem;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.nav, .foot {
+    background-color: var(--color-background);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.foot {
+    flex-direction: column;
+}
+
+.nav {
+    height: 96px;
+}
+
+.nav-container, .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav-logo, .nav-items {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    width: 96px;
+    height: 96px;
+    justify-content: center;
+}
+
+.nav-items {
+    justify-content: flex-end;
+    gap: 16px;
+    flex-grow: 1;
+}
+
+.container {
+    background: linear-gradient(120deg, rgba(147,0,158,1) 10%, rgba(255,0,0,1) 10%, rgba(255,0,0,1) 15%, rgba(255,151,0,1) 15%, rgba(255,151,0,1) 20%, rgba(255,241,0,1) 20%, rgba(255,241,0,1) 25%, rgba(2,145,0,1) 25%, rgba(2,145,0,1) 30%, rgba(24,112,255,1) 30%, rgba(24,112,255,1) 35%, rgba(149,30,255,1) 35%, rgba(149,30,255,1) 40%, rgba(147,0,158,1) 40%, rgba(147,0,158,1) 60%, rgba(255,0,0,1) 60%, rgba(255,0,0,1) 65%, rgba(255,151,0,1) 65%, rgba(255,151,0,1) 70%, rgba(255,241,0,1) 70%, rgba(255,241,0,1) 75%, rgba(2,145,0,1) 75%, rgba(2,145,0,1) 80%, rgba(24,112,255,1) 80%, rgba(24,112,255,1) 85%, rgba(149,30,255,1) 85%, rgba(149,30,255,1) 90%, rgba(147,0,158,1) 90%, rgba(147,0,158,1) 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--color-background-content);
+    min-height: 70vh;
+}
+
+.content {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.content-text, .content-album {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 50%;
+}
+
+.content-text {
+    border-radius: 32px;
+    background-color: var(--color-text-content-background);
+    color: var(--color-text-content);
+}
+
+.p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 16px;
+}
+
+#album {
+    border: 3px solid var(--color-text);
+    border-radius: 24px;
+}
+
+#buy-album {
+    color: var(--color-text-content);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 256px;
+    height: 32px;
+    font: 2rem "Swanky and Moo Moo", sans-serif;
+    background-color: var(--color-background-button);
+    border-radius: 16px;
+    border: 2px solid #8d8d8d;
+    transition: background-color 500ms ease;
+    margin-bottom: 16px;
+}
+
+#buy-album:hover {
+    cursor: grab;
+    background-color: var(--color-background-button-hover);
+}
+
+#buy-album:active {
+    cursor: grabbing;
+}
+
+.follow, .copy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.follow {
+    height: 192px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials {
+    display: flex;
+    gap: 24px;
+}
+
+.copy {
+    height: 128px;
+    gap: 16px;
+}
+
+#rein {
+    color: var(--color-text);
+    text-decoration: none;
+    font-style: small-caps;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+#rein:hover {
+    text-decoration: underline;
+}
+
+#copy {
+    font-size: 1.2rem;
+}
+
+#copy-copy {
+    font-family: "Tomorrow", sans-serif;
+}
+
+#home, #tour, #contact, #shop {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 500ms ease;
+}
+
+#home:hover, #tour:hover, #contact:hover, #shop:hover {
+    text-decoration: underline;
+    color: var(--color-text-nav-hover);
+}
+
+#home {
+    color: var(--color-text-nav-hover);
+}
+
+t {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+a {
+    text-decoration: none;
+}

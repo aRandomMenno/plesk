@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Oefening 1 </title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div id="forum">
+            <form name="inschrijfforum" method="post" action="https://sd-lab.nl/INTERFACE1/index.php" target="_blank">
+                <label for="account_type">account type:</label> <br>
+                <input type="text" id="account_type" name="account_type" value="user" readonly> <br>
+                <br>
+                <label for="profiel_foto">profiel foto</label> <br>
+                <input type="file" name="profiel_foto" id="profiel_foto" accept=".png, .svg, .jpg, .jpeg"> <br>
+                <br>
+                <label for="student_num">student nummer:</label> <br>
+                <input type="number" id="student_num" name="student_num" required> <br>
+                <br>
+                <label for="voornaam">voornaam:</label> <br>
+                <input type="text" id="voornaam" name="voornaam" required> <br>
+                <br>
+                <label for="achternaam">achternaam:</label> <br>
+                <input type="text" id="achternaam" name="achternaam" required> <br>
+                <br>
+                <label for="geslacht">geslacht:</label> <br>
+                <input type="radio" id="geslachtV" name="geslacht" value="Vrouw" required> Vrouw <br>
+                <input type="radio" id="geslachtM" name="geslacht" value="Man" required> Man <br>
+                <br>
+                <label for="geboortedatum">geboortedatum</label> <br>
+                <input type="date" id="geboortedatum" name="geboortedatum" required> <br>
+                <br>
+                <label for="email">email:</label> <br>
+                <input type="email" id="email" name="email" required> <br>
+                <br>
+                <label for="gebruikersnaam">gebruikersnaam:</label> <br>
+                <input type="text" name="gebruikersnaam" id="gebruikersnaam" required><br>
+                <br>
+                <label for="wachtwoord">Stel wachtwoord in:</label> <br>
+                <input type="password" name="wachtwoord" id="wachtwoord" required><br>
+                <br>
+                <label for="klas">klas:</label>
+                <select name="klas" id="klas">
+                    <option value="d1a">D1A</option>
+                    <option value="d1b">D1B</option>
+                    <option value="d1c">D1C</option>
+                    <option value="d1d">D1D</option>
+                    <option value="d1e">D1E</option>
+                    <option value="d1f">D1F</option>
+                </select><br>
+                <br>
+                <input type="submit" id="submit" value="submit"> <br><br>
+                <p>
+                    Klik <a href="../../../">hier </a>voor alle opdrachten en oefeningen. 
+                </p>
+            </form>
+        </div>
+    </body>
+</html>

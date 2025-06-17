@@ -1,0 +1,98 @@
+@keyframes width-height {
+    0% {
+        width: 70px;
+        height: 70px;
+        top: 10px;
+        left: 10px;
+    }
+
+    50% {
+        width: 200px;
+        height: 200px;
+        top: calc(50% - 100px);
+        left: 10px;
+    }
+
+    100% {
+        width: 20px;
+        height: 20px;
+        left: calc(100% - 30px);
+    }
+}
+
+@keyframes position {
+    0% {
+        top: 10px;
+        left: 210px;
+    }
+
+    50% {
+        top: calc(100% - 60px);
+        left: 410px;
+        transform: rotate(180deg);
+    }
+
+    100% {
+        top: 10px;
+        left: 610px;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        left: 410px;
+        top: 10px;
+    }
+    50% {
+        transform: rotate(240deg);
+        left: 810px;
+        width: 120px;
+        height: 160px;
+        top: calc(100% - 170px);
+    }
+    75% {
+        transform: rotate(480deg);
+        height: 160px;
+        height: 120px;
+        left: 460px;
+        top: calc(50% - 60px);
+    }
+    100% {
+        transform: rotate(720deg);
+        width: 50px;
+        height: 50px;
+        left: 10px;
+        top: 10px;
+    }
+}
+
+.one {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    animation: width-height 3500ms alternate infinite ease-in-out;
+    background-color: aqua;
+}
+
+.two {
+    position: absolute;
+    top: 10px;
+    left: 210px;
+    width: 50px;
+    height: 50px;
+    animation: position 3500ms alternate infinite ease-in-out;
+    background-color: lightsalmon;
+}
+
+.three {
+    position: absolute;
+    top: 10px;
+    left: 410px;
+    width: 50px;
+    height: 50px;
+    animation: rotate 3500ms alternate infinite ease-in-out;
+    background-color: lightgreen;
+}

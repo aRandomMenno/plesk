@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Oefening 2 </title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <h1>Oefening 2 - Audio</h1>
+
+        <audio id="audio1" src="aud/audio1.mp3" hidden></audio>
+        <p>
+            Audio element 1 is 'hidden' dus niet zichtbaar, maar wel aanwezig.
+            En als ik daaraan de attribuut 'autoplay' aan zou toevoegen,
+            dan zou ik hem niet kunnen stoppen met de knoppen.
+        </p>
+
+        <audio id="audio2" src="aud/audio2.mp3" controls></audio> <br>
+        <p>
+            Audio element 2 is zichtbaar en heeft de attribuut 'controls' toegevoegd.
+            Hierdoor kan de gebruiker het geluid starten, pauzeren en het volume aanpassen.
+        </p>
+
+        <button onclick="playAudio('audio1')">Speel Geluid 1</button>
+        <button onclick="pauseAudio('audio1')">pauzeer geluid 1</button>
+        <br>
+        <button onclick="playAudio('audio2')">Speel Geluid 2</button>
+        <button onclick="pauseAudio('audio2')">pauzeer geluid 2</button>
+        <br>
+
+        <p>
+            Met de knoppen hierboven kan je het geluid starten en pauzeren.
+            Dit word geregeld met javascript. <a href="script.js">dit is de js</a>.
+        </p>
+
+        <p>
+            Waarom staan er (soms) meerdere bestanden van verschillende typen in één audio-tag?
+        </p>
+        <p style>
+            Dit komt omdat verschillende browsers verschillende audioformaten ondersteunen.
+            Door meerdere bestanden van verschillende typen op te nemen, zorg je ervoor dat
+            het geluid in zoveel mogelijk browsers correct wordt afgespeeld.
+        </p>
+        <p>
+            Klik <a href="../../../">hier</a> om terug naar alle opdrachten en oefeningen te gaan.
+        </p>
+    </body>
+
+    <script src="script.js"></script>
+</html>

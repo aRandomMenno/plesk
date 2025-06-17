@@ -1,0 +1,143 @@
+header,
+nav {
+	z-index: 100;
+}
+
+@media screen and (max-width: 800px) {
+	.hamburger-menu {
+		display: block;
+		cursor: pointer;
+		z-index: 201;
+	}
+
+	.hamburger-icon {
+		width: 30px;
+		height: 20px;
+		position: relative;
+		margin: 0px;
+		transform: rotate(0deg);
+		transition: .5s ease-in-out;
+	}
+
+	.hamburger-icon span {
+		display: block;
+		position: absolute;
+		height: 3px;
+		width: 100%;
+		background: #fff;
+		border-radius: 9px;
+		opacity: 1;
+		left: 0;
+		transform: rotate(0deg);
+		transition: .25s ease-in-out;
+	}
+
+	.hamburger-icon span:nth-child(1) {
+		top: 0px;
+	}
+
+	.hamburger-icon span:nth-child(2) {
+		top: 8px;
+	}
+
+	.hamburger-icon span:nth-child(3) {
+		top: 16px;
+	}
+
+	.hamburger-icon.active span:nth-child(1) {
+		top: 8px;
+		transform: rotate(135deg);
+	}
+
+	.hamburger-icon.active span:nth-child(2) {
+		opacity: 0;
+		left: -60px;
+	}
+
+	.hamburger-icon.active span:nth-child(3) {
+		top: 8px;
+		transform: rotate(-135deg);
+	}
+
+	.header-links {
+		position: fixed;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100vh;
+		background-color: var(--color-primary);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 30px;
+		transition: 0.5s;
+		z-index: 200;
+	}
+
+	.header-links.active {
+		left: 0;
+	}
+
+	body.menu-open {
+		overflow: hidden;
+	}
+
+	.header-links a {
+		font-size: 2em;
+	}
+
+	nav {
+		flex-direction: column;
+		padding: 0;
+		height: auto;
+	}
+
+	.nav-dropdown-toggle {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		padding: 15px 20px;
+		cursor: pointer;
+		font-size: 1.5em;
+	}
+
+	.nav-links {
+		display: none;
+		width: 100%;
+		flex-direction: column;
+		padding: 0;
+	}
+
+	.nav-links.active {
+		display: flex;
+	}
+
+	.nav-links a {
+		padding: 15px 20px;
+		width: 100%;
+		text-align: left;
+		border-top: 1px solid rgba(0, 0, 0, 0.1);
+	}
+}
+
+@media screen and (min-width: 801px) {
+	.hamburger-menu {
+		display: none;
+	}
+
+	.nav-dropdown-toggle {
+		display: none;
+	}
+
+	.nav-links {
+		display: flex;
+		align-items: center;
+	}
+
+	.header-links {
+		display: flex;
+		align-items: center;
+	}
+}

@@ -1,0 +1,25 @@
+td, th {
+    font-size: 1.2rem;
+    padding: 12px;
+    padding-top: 0;
+}
+
+.p {
+    font-size: 1.2rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.content-text {
+    padding: 32px;
+}
+
+#home {
+    color: #fff;
+}
+
+#tour {
+    color: #ff68d2;
+}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS3 - Oefening 3a</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="js/event.js"></script>
+    </head>
+
+    <body onload="loaded()">
+        <h2>Klik op de knop en kijk in de console</h2>
+        <button onclick="knopKlik()" id="knop1">Click!</button>
+        <hr>
+        <h2>Klik in het tekstveld</h2>
+        <form>
+            <label for="textfield">Text Field:</label>
+            <input type="textfield" id="textfield" placeholder="Enter text" onfocus="tekstveldFocus()">
+        </form>
+        <h2>Dubbelklik op dit plaatje</h2>
+        <img src="img/zelda1.jpg" alt="Zelda" ondblclick="plaatjeDubbelklik()" class="zelda" onmouseover="plaatjeMouseOver()" onmouseout="plaatjeMouseOut()"/>
+        <div id="uitvoerveld">Welk spel is dit?</div>
+    </body>
+</html>

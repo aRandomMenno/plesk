@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht 1.1</title>
+    <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center mt-4 mb-4">Bootstrap Installatie Documentatie</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-md-10 col-12 mx-auto">
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="card-title mb-0">Gekozen Installatiemethode: NPM Lokaal</h2>
+                    </div>
+                    <div class="card-body">
+                        <h4>Waarom NPM Lokaal?</h4>
+                        <p>Ik heb gekozen voor de NPM (Node Package Manager) lokale installatie omdat:</p>
+                        <p>
+                            1: Offline kan testen of alles er goed uit ziet. 2: Ik kan precies kiezen welke versie ik wil
+                            gebruiken. 3: Als ik zou willen zou ik de Bootstrap bestanden kunnen aanpassen. 4: Het heeft 
+                            vaak een snellere laadtijd omdat het van dezelfde server komt. 5: Het is makkelijk te beheren 
+                            (naar mijn mening)
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header bg-success text-white">
+                        <h2 class="card-title mb-0">Installatiestappen NPM Methode</h2>
+                    </div>
+                    <div class="card-body">
+                        <h4>Stap 1: NPM Project Initialiseren</h4>
+                        <p>Open terminal en voer uit:</p>
+                        <div class="bg-light p-3 rounded">
+                            <code>npm init -y</code>
+                        </div>
+
+                        <h4 class="mt-4">Stap 2: Bootstrap Installeren</h4>
+                        <p>Installeer Bootstrap via NPM:</p>
+                        <div class="bg-light p-3 rounded">
+                            <code>npm install bootstrap</code>
+                        </div>
+
+                        <h4 class="mt-4">Stap 3: Bootstrap CSS Linken</h4>
+                        <p>Verwijs naar het lokale Bootstrap CSS bestand:</p>
+                        <div class="bg-light p-3 rounded">
+                            <code>&lt;link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"&gt;</code>
+                        </div>
+
+                        <h4 class="mt-4">Stap 4: Bootstrap JavaScript Toevoegen</h4>
+                        <p>Voeg het lokale JavaScript bestand toe:</p>
+                        <div class="bg-light p-3 rounded">
+                            <code>&lt;script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header bg-info text-white">
+                        <h2 class="card-title mb-0">Bootstrap Basisstructuur Demonstratie</h2>
+                    </div>
+                    <div class="card-body">
+                        <h4>Container System</h4>
+                        <p>Deze pagina gebruikt de Bootstrap container-row-column structuur:</p>
+                        
+                        <div class="row mt-3">
+                            <div class="col-md-4">
+                                <div class="bg-primary text-white p-3 text-center rounded">
+                                    <h5>Container</h5>
+                                    <p class="mb-0">Houdt inhoud gecentreerd en responsief</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="bg-success text-white p-3 text-center rounded">
+                                    <h5>Row</h5>
+                                    <p class="mb-0">Creëert horizontale groepen van kolommen</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="bg-warning text-dark p-3 text-center rounded">
+                                    <h5>Column</h5>
+                                    <p class="mb-0">Verdeelt ruimte in 12-kolom grid systeem</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header bg-warning text-dark">
+                        <h2 class="card-title mb-0">Uitdagingen en Oplossingen</h2>
+                    </div>
+                    <div class="card-body">
+                        <h4>Gevonden uitdagingen:</h4>
+                        <ul>
+                            <li><strong>NPM installatie:</strong> Eerst Node.js en NPM moeten installeren op het systeem</li>
+                            <li><strong>Pad correcties:</strong> Juiste pad naar node_modules map configureren</li>
+                            <li><strong>Package.json:</strong> Begrijpen van dependency management</li>
+                            <li><strong>Bestandsstructuur:</strong> Organiseren van project bestanden</li>
+                        </ul>
+                        <h4 class="mt-3">Oplossingen:</h4>
+                        <ul>
+                            <li>Node.js gedownload van officiële website</li>
+                            <li>Relatieve paden gebruikt voor bestandsverwijzingen</li>
+                            <li>Documentatie bestudeerd voor NPM basics</li>
+                            <li>Logische mappenstructuur aangemaakt</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header bg-secondary text-white">
+                        <h2 class="card-title mb-0">Alternatieven en Vergelijking</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>CDN</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">✅ Zeer eenvoudig</li>
+                                    <li class="list-group-item">✅ Snel te implementeren</li>
+                                    <li class="list-group-item">✅ Automatische updates</li>
+                                    <li class="list-group-item">❌ Internet vereist om te testen</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>NPM/Lokaal (Gekozen)</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">✅ Werkt offline</li>
+                                    <li class="list-group-item">✅ Meer controle</li>
+                                    <li class="list-group-item">✅ Customization mogelijk</li>
+                                    <li class="list-group-item">❌ Complexere setup</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 text-center mt-4">
+                <p class="text-muted">Bootstrap NPM Installatie - Succesvol Geïmplementeerd</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

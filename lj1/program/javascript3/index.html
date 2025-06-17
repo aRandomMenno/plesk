@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="./assets/js/redirect.js"></script>
+        <script src="./assets/js/oefeningen.js"></script>
+        <link rel="stylesheet" href="./assets/css/styles.css">
+
+        <title>JS3 - opdrachten en oefeningen.</title>
+    </head>
+
+    <body>
+        <main>
+            <fieldset>
+                <legend>Opdrachten &amp; Oefeningen</legend>
+                <ul>
+                    <li><a id="_opd1" onclick="redirect('opdracht', '1')">opdracht 1</a></li>
+                    <li><a id="_opd2" onclick="redirect('opdracht', '2')">opdracht 2</a></li>
+                    <li><a id="_opd3" onclick="redirect('opdracht', '3')">opdracht 3</a></li>
+                    <li><a id="_oef1">oefening 1</a></li>
+                    <li><a id="_oef2">oefening 2</a></li>
+                    <li><a id="_oef3">oefening 3</a></li>
+                    <li><a id="_spdo">Speedo's</a></li>
+                </ul>
+            </fieldset>
+            <fieldset hidden id="oef1">
+                <legend>Oefening 1 </legend>
+                <ul>
+                    <li><a onclick="redirect('oefening', '1/a')">oefening 1a</a></li>
+                    <li><a onclick="redirect('oefening', '1/b')">oefening 1b</a></li>
+                    <li><a onclick="redirect('oefening', '1/c')">oefening 1c</a></li>
+                    <li><a onclick="redirect('oefening', '1/d')">oefening 1d</a></li>
+                    <li><a onclick="redirect('oefening', '1/e')">oefening 1e</a></li>
+                    <li><a onclick="redirect('oefening', '1/f')">oefening 1f</a></li>
+                </ul>
+            </fieldset>
+            <fieldset hidden id="oef2">
+                <legend>Oefening 2</legend>
+                <ul>
+                    <li><a onclick="redirect('oefening', '2/a')">oefening 2a</a></li>
+                    <li><a onclick="redirect('oefening', '2/b')">oefening 2b</a></li>
+                    <li><a onclick="redirect('oefening', '2/c')">oefening 2c</a></li>
+                    <li><a onclick="redirect('oefening', '2/d')">oefening 2d</a></li>
+                    <li><a onclick="redirect('oefening', '2/e')">oefening 2e</a></li>
+                    <li><a onclick="redirect('oefening', '2/f')">oefening 2f</a></li>
+                    <li><a onclick="redirect('oefening', '2/g')">oefening 2g</a></li>
+                    <li><a onclick="redirect('oefening', '2/h')">oefening 2h</a></li>
+                </ul>
+            </fieldset>
+            <fieldset hidden id="oef3">
+                <legend>Oefening 3</legend>
+                <ul>
+                    <li><a onclick="redirect('oefening', '3/a')">oefening 2a</a></li>
+                    <li><a onclick="redirect('oefening', '3/b')">oefening 2b</a></li>
+                    <li><a onclick="redirect('oefening', '3/c')">oefening 2c</a></li>
+                    <li><a onclick="redirect('oefening', '3/d')">oefening 2d</a></li>
+                    <li><a onclick="redirect('oefening', '3/e')">oefening 2e</a></li>
+                    <li><a onclick="redirect('oefening', '3/f')">oefening 2f</a></li>
+                    <li><a onclick="redirect('oefening', '3/g')">oefening 2g</a></li>
+                </ul>
+            </fieldset>
+            <fieldset hidden id="spdo">
+                <legend>Speedo's</legend>
+                <ul>
+                    <li><a onclick="redirect('speedo', '1')">Speedo 1</a></li>
+                    <!-- <li><a onclick="redirect('speedo', '2')">Speedo 2</a></li> -->
+                </ul>
+            </fieldset>
+            <div style="text-align: center; border: 1px solid black; padding: 32px; margin: 16px;">
+                <p style="color: red; font-weight: 900;">
+                    Your computer might crash if you visit  <a href="./do_not_visit_me/">this</a> page.
+                </p>
+            </div>
+        </main>
+    </body>
+</html>

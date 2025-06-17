@@ -1,0 +1,28 @@
+.popup {
+    height: 375px;
+    bottom: 50px;
+}
+
+.subpop1 {
+    bottom: 215px;
+    height: 210px;
+}
+
+.subpop2 {
+    bottom: 198px;
+    height: 175px;
+}
+.subpop3 {
+    bottom: 160px;
+    height: 160px;
+}
+
+.subsubpop1 {
+    bottom: 250px;
+    height: 175px;
+}
+
+.subsubpop2 {
+    bottom: 298px;
+    height: 90px;
+}

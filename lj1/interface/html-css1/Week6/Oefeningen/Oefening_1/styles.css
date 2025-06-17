@@ -1,0 +1,62 @@
+body {
+    background: url('./img/fullscreen.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.image-text {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.image-text img {
+    max-width: 100%;
+}
+
+.left-image {
+    flex-direction: row;
+    margin-left: 8px;
+}
+
+.right-image {
+    flex-direction: row-reverse;
+    margin-right: 8px;
+}
+
+.internet-image img {
+    margin-bottom: 8px;
+}
+
+.image-text p {
+    margin: 0 20px;
+}
+
+p {
+    width: 50%;
+    font-size: 1.4rem;
+}
+
+.dark-background {
+    border: 2px solid #000;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    padding: 12px;
+}
+
+img {
+    border-radius: 8px;
+    border: 2px solid #000;
+}

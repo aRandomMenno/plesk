@@ -1,0 +1,39 @@
+:root {
+    --bg-primary: rgb(230, 230, 230);
+    --bg-secondary: rgb(245, 245, 245);
+    --text-primary: rgb(0, 20, 70);
+    --text-special: rgb(60, 76, 192);
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --link: rgb(72, 155, 255);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-primary: rgb(18, 18, 18);
+        --bg-secondary: rgb(30, 30, 30);
+        --text-primary: rgb(255, 255, 255);
+        --shadow-color: rgba(0, 0, 0, 0.3);
+        --link: rgb(72, 155, 255);
+    }
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: var(--bg-secondary);
+    box-shadow: 0 2px 5px var(--shadow-color);
+    border-radius: 5px;
+    width: calc(100% - 40px);
+    height: fit-content;
+}
+
+body {
+    background-color: var(--bg-primary);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+}

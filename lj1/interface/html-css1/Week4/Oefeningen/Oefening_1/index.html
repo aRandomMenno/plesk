@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Oefening 1 </title>
+        <link rel="stylesheet" href="styles.css">
+
+        <style>
+            #info {
+                width: 400px;
+                text-align: center;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>Welkom op de pagina!</h2>
+        <div id="info">
+            Mijn naam is Menno Van Zoelen. <br>
+            Ik zit in klas D1D2 op het Grafisch Lyceum Rotterdam. <br>
+            <img src="https://arandommenno.github.io/assets/img/me_lux.jpeg" alt="" width="320px">
+            en klik <a href="../../../">hier</a> om terug naar alle opdrachten en oefeningen te gaan.
+        </div>
+        <div id="hobby">
+            Mijn hobby's zijn: <br>
+            <ul>
+                <li>Programmeren</li>
+                <li>Gamen</li>
+                <li>Slapen</li>
+            </ul>
+        </div>
+    </body>
+
+    <script>
+        let divs = document.getElementById("info");
+        divs.onmouseover = function() {
+            divs.style.backgroundColor = "lightblue";
+            console.log("muis over de tekst... :skull:");
+        }
+        divs.onmouseout = function() {
+            divs.style.backgroundColor = "white";
+        }
+    </script>
+</html>

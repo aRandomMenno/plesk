@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop</title>
+    <link rel="stylesheet" href="./css/desktop.css">
+    <script src="./js/desktop.js" defer></script>
+    <script src="./js/firefoxfix.js" defer></script>
+    <link rel="shortcut icon" href="../assets/media/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- apps -->
+    <br>
+    <div class="computer shortcut" id="computer">
+        <a href="../#no-reboot">
+            <img src="./media/icons/mycomputer.png" class="icon" draggable="false">
+            <p class="icon-text">My Computer</p>
+        </a>
+    </div>
+
+    <div class="nnetwork shortcut" id="nnetwork" onclick="opennetwork()">
+        <img src="./media/icons/networkneighborhood.png" class="icon" draggable="false">
+        <p class="icon-text">Network Neighborhood</p>
+    </div>
+
+    <div class="inbox shortcut" id="inbox" onclick="openadres()">
+        <img src="./media/icons/inbox.png" class="icon" draggable="false">
+        <p class="icon-text">Inbox</p>
+    </div>
+
+    <div class="recyclebin shortcut" id="recyclebin" onclick="openbin()">
+        <img src="./media/icons/recyclebin.png" class="icon" draggable="false">
+        <p class="icon-text">Recycle Bin</p>
+    </div>
+
+    <div class="charmap shortcut" id="charmapshortcut" onclick="openchar()">
+        <img src="./media/icons/charmap.png" class="icon" draggable="false">
+        <p class="icon-text">Character Map</p>
+    </div>
+
+    <div class="calc shortcut" id="calcshortcut" onclick="opencalc()">
+        <a href="./calc/">
+            <img src="./media/icons/calcicon.png" class="icon" draggable="false">
+            <p class="icon-text">Calculator</p>
+        </a>
+    </div>
+
+    <!-- pop-up menu -->
+    <div class="popup" id="popup">
+        <p id="subpop1">Programs &gt;</p>
+        <p id="subpop2">Documents &gt;</p>
+        <p id="subpop3">Settings &gt;</p>
+        <p>Find</p>
+        <p>Help</p>
+        <p>Run</p>
+        <hr>
+        <p id="disable-gui"><a href="../#no-reboot">Disable GUI</a></p>
+    </div>
+
+    <!-- sub-pop 1-->
+    <div class="subpop1" id="subpopmenu1">
+        <p id="subsubpop1">Accessories &gt;</p>
+        <p id="subsubpop2">Games &gt;</p>
+        <p><a href="../#no-reboot">GooberOS Terminal</a></p>
+        <p>Microsoft Exchange</p>
+        <p>The Microsoft Network</p>
+        <p>Windows Explorer</p>
+    </div>
+
+    <!-- sub-pop 2-->
+    <div class="subpop2" id="subpopmenu2">
+        <p>Text Documents</p>
+        <p>Spreadsheets</p>
+        <p>Images</p>
+        <p>Media Files</p>
+        <p>Stored Files</p>
+    </div>
+
+    <!-- sub-pop 3-->
+    <div class="subpop3" id="subpopmenu3">
+        <p>Control Panel</p>
+        <hr>
+        <p>Dial-Up Networking</p>
+        <p>Printers</p>
+        <p>Taskbar &amp; Start Menu</p>
+    </div>
+
+    <!--sub-sub-pop1-->
+    <div class="subsubpop1" id="subsubpopmenu1">
+        <p id="calclink"><a href="./calc/">Calculator</a></p>
+        <p id="intractable" onclick="openchar()">Character Map</p>
+        <p id="intractable" onclick="openadres()">Adress Book</p>
+        <p>NotePad</p>
+        <p>WordPad</p>
+        <p>Paint</p>
+    </div>
+
+    <!--sub-sub-pop2-->
+    <div class="subsubpop2" id="subsubpopmenu2">
+        <p><a href="./wordle/">Wordle</a></p>
+        <p><a href="./snake/">Snake</a></p>
+        <p><a href="./minesweeper/">Minesweeper</a></p>
+    </div>
+
+
+    <!-- network -->
+    <div class="network" id="network" foc>
+        <div class="network-header" id="network-header">
+            <label>Network Neighborhood</label>
+            <button id="minimize-network" onclick="closenetwork()">-</button>
+            <button id="maximize-network" onclick="largenetwork()">□</button>
+            <button id="close-network" onclick="closenetwork()">x</button>
+        </div>
+        <div class="network-body" id="network-body">
+            <h1>No other GooberOS instances found!</h1>
+        </div>
+    </div>
+
+
+    <!-- bin -->
+    <div class="bin" id="bin" foc>
+        <div class="bin-header" id="bin-header">
+            <label>Recycle Bin</label>
+            <button id="minimize-bin" onclick="closebin()">-</button>
+            <button id="maximize-bin" onclick="largebin()">□</button>
+            <button id="close-bin" onclick="closebin()">x</button>
+        </div>
+        <div class="bin-body" id="bin-body">
+            <h1>Your Bin is currently empty!</h1>
+        </div>
+    </div>
+
+    <!-- Adress Book -->
+    <div class="adres" id="adres" foc>
+        <div class="adres-header" id="adres-header">
+            <label>Adress Book</label>
+            <button id="minimize-adres" onclick="closeadres()">-</button>
+            <button id="maximize-adres" onclick="largeadres()">□</button>
+            <button id="close-adres" onclick="closeadres()">x</button>
+        </div>
+        <div class="adres-body" id="adres-body"></div>
+    </div>
+
+
+    <!-- Character map-->
+    <div class="charactermap" id="charactermap">
+        <div class="charactermap-header" id="charactermap-header">
+            <label>Character Map</label>
+            <button id="minimize-charactermap" onclick="closechar()">-</button>
+            <button id="maximize-charactermap" onclick="largechar()">□</button>
+            <button id="close-charactermap" onclick="closechar()">x</button>
+        </div>
+        <div class="charactermap-body" id="charactermap-body"></div>
+    </div>
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="taskbar" id="taskbar">
+            <button id="start-button">
+                <img src="./media/icons/footerimg.png" class="footerimg">
+                <p class="button-text">Start</p>
+            </button>
+            <input id="search" type="text" placeholder="Search...">
+            <div id="timediv">
+                <p id="time"></p>
+            </div>
+            <div class="taskbar-icons" id="taskbar-icons"></div>
+        </div>
+    </footer>
+</body>
+
+</html>

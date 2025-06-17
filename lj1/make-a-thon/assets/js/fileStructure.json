@@ -1,0 +1,95 @@
+{
+	"/": {
+		"bin": {
+			"ls": {
+				".type": "executable"
+			},
+			"pwd": {
+				".type": "executable"
+			},
+			"cd": {
+				".type": "executable"
+			},
+			"clear": {
+				".type": "executable"
+			},
+			"users": {
+				".type": "executable"
+			},
+			"adduser": {
+				".type": "executable"
+			},
+			"deluser": {
+				".type": "executable"
+			},
+			"help": {
+				".type": "executable"
+			},
+			"exit": {
+				".type": "executable"
+			},
+			"open-gui": {
+				".type": "executable"
+			}
+		},
+		"home": {
+			"guest": {
+				"Documents": {
+					"welcome.txt": {
+						"content": "Welcome to the guest account!",
+						".type": "file"
+					}
+				},
+				"downloads": {
+					".type": "directory"
+				},
+				"desktop": {
+					".type": "directory"
+				},
+				"music": {
+					".type": "directory"
+				},
+				"pictures": {
+					".type": "directory"
+				},
+				"videos": {
+					".type": "directory"
+				},
+				".type": "directory"
+			},
+			"user": {
+				"Documents": {
+					"welcome.txt": {
+						"content": "This is the account of the normal user!",
+						".type": "file"
+					}
+				},
+				"downloads": {
+					".type": "directory"
+				},
+				"desktop": {
+					".type": "directory"
+				},
+				"music": {
+					".type": "directory"
+				},
+				"pictures": {
+					".type": "directory"
+				},
+				"Videos": {
+					".type": "directory"
+				},
+				".type": "directory"
+			},
+			".type": "directory"
+		},
+		"root": {
+			"welcome.txt": {
+				"content": "This is the root account, and has all permissions!",
+				".type": "file"
+			},
+			".type": "directory"
+		},
+		".type": "directory"
+	}
+}

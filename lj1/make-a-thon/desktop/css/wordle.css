@@ -1,0 +1,96 @@
+@font-face {
+    font-family: "Windows95";
+    src: url(../media/fonts/w95fa.woff2);
+}
+
+body {
+    font-family: "Windows95", sans-serif;
+    text-align: center;
+    background-color: #C0C0C0;
+    color: black;
+    padding: 20px;
+    cursor: url(../../assets/cursors/arrow.cur), default;
+}
+
+hr {
+    width: 500px;
+    border: 2px inset #fff;
+    margin: 10px auto;
+}
+
+.title-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#title {
+    margin: 0;
+    margin-left: 50px;
+    font-size: 28px;
+    font-weight: bold;
+    background-color: #000080;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid #000000;
+    box-shadow: inset -2px -2px #808080, inset 2px 2px #ffffff;
+}
+
+#back {
+    font-size: 24px;
+    color: white;
+    padding: 8px;
+}
+
+#board {
+    width: 350px;
+    height: 420px;
+    margin: 0 auto;
+    margin-top: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #C0C0C0;
+    border: 2px solid #808080;
+    box-shadow: inset -2px -2px #ffffff, inset 2px 2px #000000;
+    padding: 10px;
+}
+
+.tile {
+    border: 2px solid #808080;
+    width: 60px;
+    height: 60px;
+    margin: 2.5px;
+
+    color: black;
+    font-size: 24px;
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E0E0E0;
+    box-shadow: inset -2px -2px #ffffff, inset 2px 2px #000000;
+}
+
+.correct {
+    background-color: #008000;
+    color: white;
+    border-color: #000000;
+}
+
+.present {
+    background-color: #FFFF00;
+    color: black;
+    border-color: #000000;
+}
+
+.absent {
+    background-color: #808080;
+    color: white;
+    border-color: #000000;
+}
+
+i {
+    cursor: url(../../assets/cursors/hand.png), pointer;
+}

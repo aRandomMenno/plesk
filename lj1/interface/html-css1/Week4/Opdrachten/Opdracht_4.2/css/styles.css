@@ -1,0 +1,75 @@
+@font-face {
+    font-family: Kode Mono;
+    src: url(../../Opdracht_4.1/Kode_Mono.ttf);
+}
+
+body {
+    font-family: Kode Mono;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+    padding: 12px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: #080808;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 128px;
+    padding: 10px;
+    font-size: 40px;
+    font-weight: 700;
+    background-color: rgb(0, 81, 255);
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 12px;
+    position: relative;
+}
+
+.pfp {
+    width: 86.8px;
+    height: 115.6px;
+    border-radius: 8px;
+    border: 2px solid black;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.school, .hobby, .future {
+    padding: 12px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 12px;
+}
+
+.school {
+    background-color: #940b29;
+}
+
+.hobby {
+    background-color: #007200;
+}
+
+.future {
+    background-color: #12128b;
+}
+
+.footer {
+    height: 96px;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    background-color: rgb(0, 81, 255);
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 12px;
+    margin-top: 12px;
+}

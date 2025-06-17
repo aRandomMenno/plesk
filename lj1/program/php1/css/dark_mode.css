@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+
+body {
+    font-family: "Playwrite IT Moderna";
+    font-weight: 300;
+    background: #fff;
+    color: #171717;
+    font-size: 1.25rem;
+}
+
+a {
+    text-decoration: none;
+    transition: color 500ms linear;
+    color: blue;
+}
+
+a:hover {
+    color: red;
+}
+
+input,
+textarea {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 0.5em;
+    border: 2px solid #171717;
+    background-color: #fff;
+    color: #171717;
+    font-size: 1em;
+    padding: 0.2em;
+}
+
+input[type="submit"] {
+    border-radius: 0.5em;
+    border: 2px solid #171717;
+    background-color: #fff;
+    color: #171717;
+    font-size: 1em;
+    padding: 0.3em;
+    transition: background-color 400ms linear;
+}
+
+input[type="submit"]:hover {
+    background-color: #d63f3f;
+    cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #171717;
+        color: #fff;
+    }
+
+    a {
+        color: chartreuse;
+    }
+
+    a:hover {
+        color: red;
+    }
+
+    input,
+    textarea {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        border-radius: 0.5em;
+        border: 2px solid #fff;
+        background-color: #171717;
+        color: #fff;
+        font-size: 1em;
+        padding: 0.2em;
+    }
+
+    input[type="submit"] {
+        border-radius: 0.5em;
+        border: 2px solid #fff;
+        background-color: #171717;
+        color: #fff;
+        font-size: 1em;
+        padding: 0.3em;
+        transition: background-color 400ms linear;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #691d1d;
+        cursor: pointer;
+    }
+}
+
+#error_message {
+    color: red;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.error {
+    color: red;
+}
+
+input:invalid,
+textarea:invalid {
+    border: 2px solid red;
+}

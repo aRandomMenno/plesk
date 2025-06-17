@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GLR - HTML-CSS 2 -|- Week 4 - Opdracht 1</title>
+
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>GLR - HTML-CSS 2 -- Week 4 - Opdracht 1</h1>
+            <h2>Table dinges</h2>
+        </header>
+
+        <main>
+            <table>
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">Naam</th>
+                        <th onclick="sortTable(1)">Leeftijd</th>
+                        <th onclick="sortTable(2)">Woonplaats</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Henk</td>
+                        <td>23</td>
+                        <td>Rotterdam</td>
+                    </tr>
+                    <tr>
+                        <td>Piet</td>
+                        <td>45</td>
+                        <td>Amsterdam</td>
+                    </tr>
+                    <tr>
+                        <td>Klaas</td>
+                        <td>32</td>
+                        <td>Utrecht</td>
+                    </tr>
+                    <tr>
+                        <td>Jan</td>
+                        <td>19</td>
+                        <td>Den Haag</td>
+                    </tr>
+                    <tr>
+                        <td>Willem</td>
+                        <td>56</td>
+                        <td>Flevoland</td>
+                    </tr>
+                    <tr>
+                        <td>Gerard</td>
+                        <td>41</td>
+                        <td>Leeuwarden</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        <script>
+            function sortTable(columnIndex) {
+                let table = document.querySelector('table');
+                let rows = Array.from(table.rows).slice(1);
+                let isNumeric = !isNaN(rows[0].cells[columnIndex].innerText);
+
+                rows.sort((rowA, rowB) => {
+                    let cellA = rowA.cells[columnIndex].innerText;
+                    let cellB = rowB.cells[columnIndex].innerText;
+
+                    if (isNumeric) {
+                        return cellA - cellB;
+                    } else {
+                        return cellA.localeCompare(cellB);
+                    }
+                });
+
+                rows.forEach(row => table.tBodies[0].appendChild(row));
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+select {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 0.5em;
+    border: 2px solid #171717;
+    background-color: #fff;
+    color: #171717;
+    font-size: 1em;
+    padding: 0.2em;
+    width: 250px;
+    cursor: pointer;
+    appearance: auto;
+}
+
+select:focus {
+    outline: none;
+    border-color: #3a7fdf;
+}
+
+select option {
+    padding: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+    select {
+        border: 2px solid #fff;
+        background-color: #171717;
+        color: #fff;
+    }
+    
+    select:focus {
+        border-color: chartreuse;
+    }
+    
+    select option {
+        background-color: #171717;
+    }
+}
+
+select:invalid {
+    border: 2px solid red;
+}

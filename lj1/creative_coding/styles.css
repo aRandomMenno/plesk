@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(36, 32, 32)
+}
+
+@keyframes train {
+    0% {
+        transform: translateX(-110%) scaleX(1)
+    }
+
+    49% {
+        transform: translateX(40%) scaleX(1)
+    }
+
+    51% {
+        transform: translateX(40%) scaleX(-1)
+    }
+
+    100% {
+        transform: translateX(-110%) scaleX(-1)
+    }
+}
+
+.loading {
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #fff;
+    background-color: #ffae07;
+    position: relative
+}
+
+#bar {
+    top: calc(50% - 36px);
+    box-sizing: border-box;
+    width: 192px;
+    margin: 4px;
+    padding: 16px;
+    position: absolute;
+    height: 64px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden
+}
+
+#train {
+    width: auto;
+    height: 32px;
+    animation: train 12s linear infinite
+}

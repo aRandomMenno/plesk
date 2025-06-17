@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'win95';
+    src: url(../../desktop/media/fonts/w95fa.woff2);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    width: calc(100% - 17px);
+    height: calc(100vh - 200px);
+    overflow-y: hidden;
+    background-color: #C0C0C0;
+    font-family: 'win95', sans-serif;
+    color: #000000;
+    margin: 0;
+    cursor: url(../cursors/arrow.cur), default;
+}
+
+.header {
+    width: 100vw;
+    height: 50px;
+    color: rgb(0, 0, 0);
+    background-color: #000080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #FFFFFF;
+    border-left: 2px solid #FFFFFF;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+}
+
+h1{
+    position: absolute;
+    left: 50px;
+    top: 10px;
+}
+
+
+.calc {
+    width: 100%;
+    height: 100%;
+    background-color: #C0C0C0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#output {
+    width: 925px;
+    height: 75px;
+    background-color: #FFFFFF;
+    margin: 20px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    padding: 5px 10px;
+    font-size: 21px;
+    font-weight: bold;
+    box-shadow: inset -2px -2px 0 #FFFFFF, inset 2px 2px 0 #808080;
+    margin-left: 475px;
+    cursor: url(../cursors/no.cur), text;
+    font-family: 'win95', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container {
+    padding-left: 13px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 kolommen met gelijke breedte */
+    grid-template-rows: repeat(4, 1fr); /* 4 rijen met gelijke hoogte */
+    gap: 0; /* Geen ruimte tussen de knoppen */
+    justify-content: center; /* Centreer de grid horizontaal */
+    align-items: center; /* Centreer de grid verticaal */
+    margin: 0 auto; /* Zorg dat de grid-container gecentreerd blijft */
+    height: 100%; /* Zorg dat de grid-container de volledige hoogte gebruikt */
+}
+
+.grid-container > div {
+    background-color: #C0C0C0;
+    color: #000000;
+    font-size: 30px;
+    text-align: center;
+    width: 350px; /* Breedte wordt automatisch bepaald door de grid */
+    height: 200px; /* Hoogte wordt automatisch bepaald door de grid */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #808080;
+    box-shadow: inset -2px -2px 0 #FFFFFF, inset 2px 2px 0 #404040;
+    border-radius: 0; /* Geen afronding van de hoeken */
+    transition: transform 0.2s; /* Animatie bij hover */
+}
+
+#backSpace, #clear, #equal {
+    background-color: #D0D0D0;
+    font-weight: bold;
+}
+
+#multiply, #divide, #add, #subtract, #square, #root {
+    background-color: #DCDCDC;
+}
+
+#one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #zero {
+    background-color: #E0E0E0;
+}
+
+#comma {
+    background-color: #D8D8D8;
+    font-size: 50px;
+}
+
+#minimize-calc {
+    position: absolute;
+    right: 115px;
+    top: 8px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    cursor: url(../cursors/hand.png), pointer;
+    font-family: 'win95', sans-serif;
+}
+
+#maximize-calc {
+    position: absolute;
+    right: 70px;
+    top: 8px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 30px;
+    cursor: url(../cursors/hand.png), pointer;
+    font-family: 'win95', sans-serif;
+}
+
+#close-calc {
+    position: absolute;
+    right: 25px;
+    top: 8px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    cursor: url(../cursors/hand.png), pointer;
+    font-family: 'win95', sans-serif;
+}
+
+.buttons {
+    cursor: url(../cursors/hand.png), pointer;
+}
+
+a {
+    color: black;
+    cursor: url(../cursors/hand.png), pointer;
+}

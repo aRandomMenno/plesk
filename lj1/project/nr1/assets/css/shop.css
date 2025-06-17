@@ -1,0 +1,122 @@
+.content {
+    gap: 24px;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 80%;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="button"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 2px solid #8d8d8d;
+    border-radius: 4px;
+    color: #001263;
+    font-size: 1rem;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+input[type="checkbox"] {
+    width: 32px;
+    height: 32px;
+    accent-color: #001263;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #001263;
+    border: 2px solid #001263;
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+#buy-album {
+    width: 100%;
+}
+
+label {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+b {
+    font-size: 1.1rem;
+}
+
+#home {
+    color: #fff;
+}
+
+#shop {
+    color: #ff68d2;
+}
+
+.title {
+    text-align: center;
+}
+
+p {
+    border-left: 2px dotted #fff;
+    padding: 12px;
+    font-size: 1.2rem;
+    /* text-align: center; */
+}
+
+h2 {
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.shop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 80%;
+    background-color: #001263bd;
+    border-radius: 24px;
+    padding-bottom: 24px;
+}
+
+#fff {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+#rainbow {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    animation: rainbow-text 15s infinite linear;
+    background: linear-gradient(to right, violet, red, red, orange, orange, yellow, yellow, green, green, blue, blue, indigo, indigo, violet);
+    background-clip: text;
+    color: transparent;
+    background-size: 200% 100%;
+}
+
+@keyframes rainbow-text {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 200% 0%; }
+}

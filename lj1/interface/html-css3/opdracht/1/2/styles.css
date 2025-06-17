@@ -1,0 +1,18 @@
+@keyframes vierkantBewegen {
+    from {
+        top: 10px;
+        left: 10px;
+    }
+
+    to {
+        top: calc(100% - 110px); 
+    }
+}
+
+.vierkant {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: vierkantBewegen 8s alternate infinite ease-in-out;
+}

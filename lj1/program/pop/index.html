@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>Program 1 \\ POP</title>
+        <link rel="shortcut icon" href="../../assets/icon.svg" type="image/x-icon">
+
+        <link rel="stylesheet" href="../../assets/css/styles.css">
+        <link rel="stylesheet" href="../../assets/css/mini.css">
+        <link rel="stylesheet" href="./assets/css/styles.css">
+        <script src="./assets/js/greet.js"></script>
+        <script src="./assets/js/data_gen.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="../.." class="link">Home</a></li>
+                    <li><a href="../../mijnprofiel/" class="link">Mijn profiel</a></li>
+                    <li class="dropdown">
+                        <span class="dropdown-trigger"><a class="link">Program 1</a></span>
+                        <ul class="dropdown-content" id="pg">
+                            <li><a href="../program1/javascript1/" class="link">javascript 1</a></li>
+                            <li><a href="../program1/javascript2/" class="link">javascript 2</a></li>
+                            <li><a href="../program1/javascript3/" class="link">javascript 3</a></li>
+                            <li><a href="../program1/pop/" class="link" id="current">POP</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span class="dropdown-trigger"><a class="link">Interface 1</a></span>
+                        <ul class="dropdown-content" id="if">
+                            <li><a href="../../interface1/html-css1/" class="link">Html-Css 1</a></li>
+                            <li><a href="../../interface1/html-css2/" class="link">Html-Css 2</a></li>
+                            <li><a href="../../interface1/html-css3/" class="link">Html-Css 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span class="dropdown-trigger"><a class="link">Projectweken</a></span>
+                        <ul class="dropdown-content" id="pw">
+                            <li>
+                                <a href="../../projectweek1/" class="link">Projectweek 1</a></li>
+                            <li>
+                                <a href="../../projectweek2/interface1/"
+                                    class="link">Projectweek 2 (interface)</a>
+                            </li>
+                            <li>
+                                <a href="../../projectweek2/program1/" class="link">Projectweek 2
+                                    (program)</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span class="dropdown-trigger"><a class="link">"bootcamp"</a></span>
+                        <ul class="dropdown-content" id="bt">
+                            <li>
+                                <a href="../../p5.js/" class="link">p5 javascript</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../../missiontomars/" class="link">Mission to Mars</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="pop-nav-wrapper">
+            <ul class="pop-nav">
+                <li><a href="." class="current">Home</a></li>
+                <li><a href="./technieken/">technieken</a></li>
+                <li><a href="./intresses/">interesses</a></li>
+                <li><a href="./verbeterpunten/">verbeterpunten</a></li>
+            </ul>
+        </div>
+
+        <main>
+            <div class="content-div">
+                <h2 class="fancy" id="greet">Hallo, best lezer!</h2>
+                <p>
+                    Welkom op deze hele mooie website laat ik zien wat ik allemaal kan met
+                    <span class="html">HTML <img class="logo-inline html-fix"
+                            src="./assets/images/logos/html-logo.svg"></span>,
+                    <span class="css">CSS <img class="logo-inline"
+                            src="./assets/images/logos/css-logo.svg"></span> en
+                    <span class="js">JavaScript <img class="logo-inline"
+                            src="./assets/images/logos/js-logo.png"></span>
+                    De afgelopen tijd op school heb ik best wat nieuwe dingen geleerd, maar minder dan ik
+                    dacht omdat ik al een basis had.
+                </p>
+                <p>
+                    Ik weet nu beter ik hoe parameters en return statements moet gebruiken in <span class="js">JavaScript</span>.
+                    De aankomende tijd gaan we ook werken met keyframes en media queries in <span class="css">CSS</span>. 
+                    Ook heb ik op school meer geleerd over de "nieuwe" <span class="html">HTML5</span> elementen.
+                </p>
+
+                <h2 class="fancy">Junk data generator:</h2>
+                <div>
+                    <label for="dictionary">Eigen tekens:</label>
+                    <input type="text" name="dictionary" id="dictionary" placeholder="Als er hier een karakter of meerdere karakters worden ingevuld, kunnen alleen die karakters worden gebruikt in de strings.">
+                    <label for="subs">Als je de standaard tekens wilt gebruiken laat de bovenstaande input leeg.</label>
+                    <br><br>
+                    <label for="num_of_strings">Aantal junk data strings</label>
+                    <input type="number" name="num_of_strings" id="num_of_strings" value="4">
+
+                    <label for="length">Lengte van elke string:</label>
+                    <input type="number" name="length" id="length" value="16">
+
+                    <label for="separator">Scheider:</label>
+                    <input type="text" name="separator" id="separator" value="<br>">
+                    <label for="subs">met een '&lt;br&gt;' komt elke string op een nieuwe lijn.</label>
+
+                    <button onclick="generateData()">Genereer data</button>
+                </div>
+                <p id="result">
+                    <!-- The generated data will be displayed here -->
+                    gegeneerde data komt hier.
+                </p>
+            </div>
+        </main>
+    </body>
+</html>

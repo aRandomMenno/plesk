@@ -1,0 +1,141 @@
+/* Default to dark theme */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+}
+
+h2 {
+    padding-left: 8px;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+}
+
+.week h2 {
+    color: #bbbbbb;
+    border-bottom: 2px solid #444;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding-left: 16px;
+    margin: 10px 0;
+}
+
+a {
+    cursor: crosshair;
+    text-decoration: none;
+    color: #696cff;
+    transition: color 0.7s ease-in-out;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #ff19a7;
+}
+
+#stu_info {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#result {
+    padding: 12px;
+}
+
+/* Light theme for users who prefer it */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #f0f0f0;
+        color: #333;
+    }
+
+    .container {
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    .week h2 {
+        color: #555;
+        border-bottom: 2px solid #ddd;
+    }
+
+    a {
+        color: #007BFF;
+    }
+
+    a:hover {
+        color: #0056b3;
+    }
+
+    #stu_info {
+        background-color: #e9ecef;
+    }
+}
+
+/* Default to dark theme */
+input[type="number"],
+input[type="button"] {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+input[type="number"]::placeholder {
+    color: #888;
+}
+
+input[type="button"] {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="button"]:hover {
+    background-color: #444;
+}
+
+/* Light theme for users who prefer it */
+@media (prefers-color-scheme: light) {
+    input[type="number"],
+    input[type="button"] {
+        background-color: #fff;
+        color: #333;
+        border: 1px solid #ccc;
+    }
+
+    input[type="number"]::placeholder {
+        color: #aaa;
+    }
+
+    input[type="button"]:hover {
+        background-color: #f0f0f0;
+    }
+}

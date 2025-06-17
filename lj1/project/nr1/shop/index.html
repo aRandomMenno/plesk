@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="description" content="Reinaeiry - Official website. Find tour info, contact details, and follow on social media.">
+        <meta name="keywords" content="Reinaeiry, music, tour, contact, social media">
+        <meta name="author" content="Reinaeiry Music">
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../assets/css/styles.css">
+        <link rel="stylesheet" href="../assets/css/shop.css">
+
+        <script src="../assets/js/shop.js"></script>
+
+        <title>Reinaeiry | De winkel</title>
+    </head>
+
+    <body>
+        <div class="foot" id="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="../assets/img/logo.svg" alt="LOGO.svg">
+                </div>
+
+                <div class="nav-items">
+                    <a href="../" id="home">Home</a> <t>|</t>
+                    <a href="../tour/" id="tour">Tour Info</a> <t>|</t>
+                    <a href="../contact/" id="contact">Contact</a> <t>|</t>
+                    <a href="../shop/" id="shop">Shop</a> 
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="content">
+                <div class="shop">
+                    <div id="bestel_info">
+                        <h1>De informatie van de bestelling komt hier te staan.</h1>
+                    </div>
+                </div>
+                <div class="shop">
+                    <h1>De winkel:</h1>
+                    <form>
+                        <span id="fff"><div id="rainbow">Bij tickets &amp; een album krijg je 10% korting</div></span>
+
+                        <label for="naam">Uw naam:</label>
+                        <input type="text" name="naam" id="naam" value="Menno" required>
+                        
+                        <label for="land">Het land waar u woont:</label>
+                        <input type="text" name="land" id="land" value="Nederland" required>
+
+                        <label for="stad">De stad waar u woont:</label>
+                        <input type="text" name="address" id="stad" value="Spijkenisse" required>
+
+                        <label for="postcode">Uw postcode:</label>
+                        <input type="text" name="postcode" id="postcode" value="1234 AB" required>
+
+                        <label for="huisnummer">Uw huisnummer:</label>
+                        <input type="text" name="huisnummer" id="huisnummer" value="34" required>
+                        <input type="text" name="huisnummer_toevoeging" id="huisnummer_toevoeging" placeholder="Laat dit leeg als je geen toevoeging hebt!">
+
+                        <label for="aantal_tickets">Hoeveel tickets voor de tour? (&euro;30 p/s)</label>
+                        <input type="number" name="aantal_tickets" id="aantal_tickets" min="0" max="99" oninput="if (this.value > 99) { this.value = 99 } else if (this.value < 0) { this.value = 0 }" value="4" required>
+                        
+                        <label for="album">Album:</label>
+                        <span>
+                            <select name="album" id="album">
+                                <option value="none">geen album</option>
+                                <option value="foret_adventure">Album: Foret Adventure (&euro;25)</option>
+                            </select>
+                        </span>
+
+                        <label for="opmerkingen">opmerking voor de bestelling:</label>
+                        <textarea name="opmerkingen" id="opmerkingen" placeholder="als je geen opmerkingen hebt dat kun je dit veld leeg laten."></textarea>
+
+                        <input type="button" value="bestellen" id="bestellen">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="foot">
+            <div class="copy">
+                <div>
+                    <a id="rein" href="../">REINAEIRY</a>
+                </div>
+                <div id="copy">
+                    <span id="copy-copy">&copy;</span> 2024 Reinaeiry Music. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

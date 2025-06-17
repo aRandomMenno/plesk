@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Oefening 1 </title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div id="forum">
+            <form name="inschrijfforum" method="post">
+                <label for="student_num">student nummer:</label> <br>
+                <input type="text" id="student_num" name="student_num" required> <br>
+                <br>
+                <label for="voornaam">voornaam:</label> <br>
+                <input type="text" id="voornaam" name="voornaam" required> <br>
+                <br>
+                <label for="achternaam">achternaam:</label> <br>
+                <input type="text" id="achternaam" name="achternaam" required> <br>
+                <br>
+                <label for="geslacht">geslacht:</label> <br>
+                <input type="radio" id="geslachtV" name="geslacht" value="Vrouw" required> Vrouw <br>
+                <input type="radio" id="geslachtM" name="geslacht" value="Man" required> Man <br>
+                <br>
+                <label for="geboortedatum">geboortedatum</label> <br>
+                <input type="date" id="geboortedatum" name="geboortedatum" required> <br>
+                <br>
+                <label for="email">email:</label> <br>
+                <input type="email" id="email" name="email" required> <br>
+                <br>
+                <label for="wachtwoord">Stel wachtwoord in:</label> <br>
+                <input type="password" name="wachtwoord" id="wachtwoord"><br>
+                <br>
+                <label for="klas">klas:</label>
+                <select name="klas" id="klas">
+                    <option value="d1a">D1A</option>
+                    <option value="d1b">D1B</option>
+                    <option value="d1c">D1C</option>
+                    <option value="d1d">D1D</option>
+                    <option value="d1e">D1E</option>
+                    <option value="d1f">D1F</option>
+                </select><br>
+                <br>
+                <input type="submit" id="submit" value="submit">
+                <p>
+                    <i>Als je in de console kijkt zie je de waardes van de input velden!</i> <br>
+                    Klik <a href="../../../">hier </a>voor alle opdrachten en oefeningen.
+                </p>
+            </form>
+        </div>
+    </body>
+
+    <script>
+        document.getElementById("forum").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            formData.forEach((value, key) => {
+                console.log(`${key}: ${value}`);
+            });
+        });
+    </script>
+</html>

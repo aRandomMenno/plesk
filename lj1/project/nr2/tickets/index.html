@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ticket shop</title>
+
+        <link rel="stylesheet" href="../assets/css/styles.css">
+        <link rel="stylesheet" href="../assets/css/tickets.css">
+        <script src="../assets/js/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Schilderijen</a></li>
+                    <li><a class="current" href=".">Tickets</a></li>
+                    <li><a href="../openingstijden/index.html">Openingstijden</a></li>
+                    <li><a href="#niet-nog-een-pagina">Mohamed Melehi</a>
+                        <ul class="dropdown">
+                            <li><a href="#biografie">biografie</a></li>
+                            <li><a href="#kunstwerken">Kunststijl</a></li>
+                            <li><a href="#meer-info">bla bla</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://www.boijmans.nl/">Boijmans.nl</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <form id="ticketForm">
+                <label for="dagDeel">Wanneer wil je bezoeken?</label>
+                <select name="dagDeel" id="dagDeel">
+                    <option value="ochtend">Ochtend</option>
+                    <option value="middag">Middag</option>
+                    <option value="avond">Avond</option>
+                </select>
+                
+                <label for="aantalTickets">(&euro;15/stuk) Hoeveel tickets wil je kopen?</label>
+                <input type="number" name="aantalTickets" id="aantalTickets" required min="1" max="10" value="4">
+
+                <label for="kortingsKaart">Heb je een kortingskaart?</label>
+                <input type="checkbox" name="kortingsKaart" id="kortingsKaart">
+
+                <label for="voornaam">Wat is je voornaam?</label>
+                <input type="text" name="voornaam" id="voornaam" required value="Menno">
+
+                <label for="tussenvoegsel">Wat is je tussenvoegsel?</label>
+                <input type="text" name="tussenvoegsel" id="tussenvoegsel" value="van">
+
+                <label for="achternaam">Wat is je achternaam?</label>
+                <input type="text" name="achternaam" id="achternaam" required value="Zoelen">
+
+                <label for="email">Wat is je email?</label>
+                <input type="email" name="email" id="email" required value="101945@glr.nl">
+
+                <label for="telefoonNummer">(optioneel) Wat is je telefoonnummer?</label>
+                <input type="tel" name="telefoonNummer" id="telefoonNummer" pattern="[0-9]{10}">
+
+                <label for="datum">Kies een datum</label>
+                <input type="date" name="datum" id="datum" required value="2025-02-04">
+
+                <label for="betaalmethode">Kies je betaalmethode</label>
+                <select name="betaalmethode" id="betaalmethode" required>
+                    <option value="iDeal">iDEAL</option>
+                    <option value="Creditcard">Creditcard</option>
+                    <option value="PayPal">PayPal</option>
+                </select>
+                <input type="submit" value="betalen" onclick="event.preventDefault(); betalen();" id="naarBetalen">
+            </form>
+            <div class="success" id="success">
+                
+            </div>
+        </main>
+        <script>
+
+        </script>
+    </body>
+</html>

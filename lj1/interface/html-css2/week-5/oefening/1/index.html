@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../assets/css/oefening-default.css">
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GLR - HTML-CSS 2 - oefening 1 en 2 </title>
+    </head>
+
+    <body>
+        <fieldset>
+            <legend>Week 5, Oefening 1 - Fieldset</legend>
+
+            <form>
+                <label for="aanhef">Aanhef: </label>
+                <select name="aanhef" id="aanhef">
+                    <option value="Meneer">Meneer</option>
+                    <option value="Mevrouw">Mevrouw</option>
+                </select>
+                <br>
+                <label for="naam">Uw naam: </label>
+                <input type="text" name="naam" id="naam" placeholder="Voornaam" title="Vul uw voornaam in"
+                    required>
+                <br>
+                <label for="achternaam">Uw achternaam:</label>
+                <input type="text" name="achternaam" id="achternaam" placeholder="Achternaam"
+                    title="Vul uw achternaam in" required>
+                <br>
+                <label for="straatnaam">Uw straatnaam:</label>
+                <input type="text" name="straatnaam" id="straatnaam" placeholder="Straatnaam"
+                    title="Vul uw straatnaam in" required>
+                <br>
+                <label for="huisnummer">Uw huisnummer:</label>
+                <input type="text" name="huisnummer" id="huisnummer" placeholder="Huisnummer"
+                    title="Vul uw huisnummer in" required>
+                <br>
+                <label for="postcode">Uw postcode:</label>
+                <input type="text" name="postcode" id="postcode" placeholder="Postcode"
+                    pattern="[0-9]{4}[A-Z]{2}" title="Vul een geldig Nederlands postcode in!"
+                    onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Ongeldig Nederlands postcode, 4 cijfers gevolgd door 2 letters' : '');"
+                    required>
+                <br>
+                <label for="email">Uw e-mailadres:</label>
+                <input type="email" name="email" id="email" placeholder="Email" title="Vul uw e-mailadres in"
+                    required>
+                <br>
+                <label for="wachtwoord">Uw wachtwoord:</label>
+                <input type="password" name="wachtwoord" id="wachtwoord" placeholder="Wachtwoord"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{12,}"
+                    title="Het wachtwoord moet minstens 12 tekens lang zijn en een hoofdletter, een kleine letter en een cijfer bevatten."
+                    required>
+                <br>
+                <label for="herhaal-wachtwoord">Herhaal wachtwoord:</label>
+                <input type="password" name="herhaal-wachtwoord" id="herhaal-wachtwoord"
+                    placeholder="Herhaal wachtwoord" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{12,}"
+                    title="Herhaal uw wachtwoord" required>
+                <br>
+                <label for></label>
+                <input type="submit" value="Verstuur" title="Verstuur het formulier">
+
+            </form>
+        </fieldset>
+    </body>
+</html>

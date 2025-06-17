@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<!-- 
+$ Improvements for the Calculator:
+@ 1. **Error Handling**: Add error handling for invalid operations (e.g., division by zero).
+@ 2. **Keyboard Support**: Implement keyboard support for better accessibility.
+& 3. **History Feature**: Add a feature to keep track of calculation history.
+% 4. **Scientific Functions**: Include more scientific functions like square root, power, trigonometric functions, etc.
+@ 5. **Memory Functions**: Implement memory functions (M+, M-, MR, MC) to store and recall values.
+% 6. **Responsive Design**: Ensure the calculator is responsive and works well on different screen sizes.
+-->
+
+<html lang="en" id="html">
+
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+        <link rel="shortcut icon" href="../../assets/img/js_logo.svg" type="image/x-icon">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS1 - extra opdracht, rekenmachine, versie 2!</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="calculator">
+                <div class="display">
+                    <input type="text" id="display" oninput="this.value = this.value.replace(/[^0-9.]/g, '')">
+                </div>
+                <div class="buttons">
+                    <button onclick="changeOperator('+')" class="operator"> + </button>
+                    <button onclick="changeOperator('-')" class="operator"> - </button>
+                    <button onclick="changeOperator('*')" class="operator"> * </button>
+                    <button onclick="changeOperator('/')" class="operator"> / </button>
+
+                    <button onclick="appendNumber(7)"> 7 </button>
+                    <button onclick="appendNumber(8)"> 8 </button>
+                    <button onclick="appendNumber(9)"> 9 </button>
+                    <button onclick="calculate()" class="calculate"> = </button>
+                    
+                    <button onclick="appendNumber(4)"> 4 </button>
+                    <button onclick="appendNumber(5)"> 5 </button>
+                    <button onclick="appendNumber(6)"> 6 </button>
+                    <button onclick="removeLastNumber()" class="dangerous"> ⌫ </button>
+                    
+                    <button onclick="appendNumber(1)"> 1 </button>
+                    <button onclick="appendNumber(2)"> 2 </button>
+                    <button onclick="appendNumber(3)"> 3 </button>
+                    <button onclick="clearDisplay()" class="dangerous"> C </button>
+
+                    <button onclick="appendNumber(0)"> 0 </button>
+                    <button onclick="appendComma('.')"> . </button>
+                    <button onclick="changeOperator('%')" class="operator"> % </button>
+                    <button onclick="clearAll()" class="dangerous"> CA</button>
+
+                    <button class="spaceMaker"></button>
+                    <button class="spaceMaker"></button>
+                    <button class="spaceMaker"></button>
+                    <button class="spaceMaker"></button>
+
+                    <button onclick="memoryAdd()" class="memory"> M+ </button>
+                    <button onclick="memorySubtract()" class="memory"> M- </button>
+                    <button onclick="memoryRecall()" class="memory"> MR </button>
+                    <button onclick="memoryClear()" class="dangerous"> MC </button>
+
+                    <button onclick="appendPI()" class="operator"> &pi; </button>
+                    <button onclick="power()" class="operator"> ^2 </button>
+                    <button onclick="changeOperator('^')" class="operator"> ^x </button>
+                    <button onclick="sqrRoot()" class="operator"> √x </button>
+                </div>
+                <p id="memoryDisplay">
+                    memory: n/a
+                </p>
+            </div>
+        </div>
+    </body>
+
+</html>
