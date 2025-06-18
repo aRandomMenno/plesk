@@ -1,0 +1,178 @@
+@font-face {
+    font-family: "Itim";
+    src: url("../media/fonts/Itim-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --primary-color: #59C8E3;
+    --secondary-color: #D4F9FD;
+    --accent-warm: #EA9E8D;
+    --accent-strong: #D64550;
+    --dark-color: #1C2826;
+    --light-color: #ffffff;
+}
+
+body {
+    font-family: "Itim", sans-serif;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--light-color) 50%, var(--accent-warm) 100%);
+    min-height: 100vh;
+    color: var(--dark-color);
+}
+
+.navbar {
+    background: rgba(28, 40, 38, 0.95) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand .brand-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color) !important;
+}
+
+.navbar-nav .nav-link {
+    color: var(--light-color) !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+.hero-section {
+    padding: 100px 0 50px;
+}
+
+.hero-logo {
+    max-width: 300px;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2));
+}
+
+.features-section {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(89, 200, 227, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(89, 200, 227, 0.3) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-strong);
+    border-color: var(--accent-strong);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(214, 69, 80, 0.4);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(89, 200, 227, 0.4);
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.page-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-warm));
+    color: var(--light-color);
+    padding: 100px 0 50px;
+    margin-top: 0;
+}
+
+.content-section {
+    padding: 50px 40px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    margin: 20px 0;
+}
+
+.competitor-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.competitor-card:hover {
+    transform: translateY(-5px);
+}
+
+.about-section {
+    background: rgba(212, 249, 253, 0.3);
+    padding: 80px 0;
+}
+
+footer {
+    background-color: var(--dark-color) !important;
+}
+
+.feature-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+}
+
+.product-showcase {
+    background: rgba(234, 158, 141, 0.1);
+}
+
+.lifestyle-section {
+    background: rgba(212, 249, 253, 0.2);
+}
+
+.lifestyle-card {
+    background: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lifestyle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(89, 200, 227, 0.3) !important;
+}
+
+.lifestyle-card img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+}

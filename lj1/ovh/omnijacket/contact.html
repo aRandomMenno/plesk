@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - OmniJacket</title>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="./media/logo.png" alt="OmniJacket Logo" height="40" class="me-2">
+                    <span class="brand-text">OmniJacket</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Over Ons</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="concurrentie.html">Concurrentieanalyse</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h1 class="display-4 fw-bold">Contact</h1>
+                        <p class="lead">Neem contact met ons op</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="competitor-card">
+                            <h2 class="text-primary mb-4 text-center">Stuur ons een bericht</h2>
+                            <form id="contact-form">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="name" class="form-label">Naam *</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">E-mail *</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="subject" class="form-label">Onderwerp</label>
+                                        <input type="text" class="form-control" id="subject">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label">Bericht *</label>
+                                        <textarea class="form-control" id="message" rows="5" required></textarea>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <button type="submit" class="btn btn-primary btn-lg">Verstuur Bericht</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-md-4">
+                        <div class="competitor-card text-center">
+                            <h4 class="text-primary mb-3">Bezoekadres</h4>
+                            <p class="mb-0">
+                                OmniJacket Hoofdkantoor<br>
+                                Innovatielaan 123<br>
+                                1234 AB Amsterdam<br>
+                                Nederland
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="competitor-card text-center">
+                            <h4 class="text-primary mb-3">Contact Info</h4>
+                            <p class="mb-1">
+                                <strong>Telefoon:</strong><br>
+                                +31 (0)20 123 4567
+                            </p>
+                            <p class="mb-0">
+                                <strong>E-mail:</strong><br>
+                                info@omnijacket.nl
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="competitor-card text-center">
+                            <h4 class="text-primary mb-3">Openingstijden</h4>
+                            <p class="mb-0">
+                                Maandag - Vrijdag:<br>
+                                09:00 - 17:00<br><br>
+                                Weekend:<br>
+                                Gesloten
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>OmniJacket</h5>
+                    <p class="mb-0">Een jas voor elk seizoen!</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">&copy; 2025 OmniJacket. Alle rechten voorbehouden.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
