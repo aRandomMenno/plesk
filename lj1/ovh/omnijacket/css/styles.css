@@ -153,6 +153,108 @@ footer {
     border: 3px solid var(--primary-color);
 }
 
+.feature-placeholder {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: white;
+    margin: 0 auto;
+}
+
+.feature-temp {
+    background-color: #59C8E3;
+}
+
+.feature-cooling {
+    background-color: #EA9E8D;
+}
+
+.feature-seasons {
+    background-color: #D64550;
+}
+
+.product-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.main-product {
+    height: 400px;
+    background-color: #59C8E3;
+    font-size: 1.5rem;
+}
+
+.detail-fabric {
+    height: 200px;
+    background-color: #EA9E8D;
+    font-size: 1rem;
+}
+
+.detail-app {
+    height: 200px;
+    background-color: #D4F9FD;
+    color: #1C2826;
+    font-size: 1rem;
+}
+
+.lifestyle-placeholder {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.cycling-placeholder {
+    background-color: #59C8E3;
+}
+
+.outdoor-placeholder {
+    background-color: #EA9E8D;
+}
+
+.founders-placeholder {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #D64550;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.technology-placeholder {
+    height: 300px;
+    background-color: #1C2826;
+    color: #59C8E3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .product-showcase {
     background: rgba(234, 158, 141, 0.1);
 }
@@ -175,4 +277,25 @@ footer {
     height: 250px;
     object-fit: cover;
     width: 100%;
+}
+
+.social-links a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.social-links a:hover {
+    color: var(--primary-color) !important;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+}
+
+.social-links a:hover .social-icon {
+    filter: brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(160deg) brightness(1.2);
 }

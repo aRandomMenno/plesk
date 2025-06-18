@@ -37,19 +37,18 @@ OmniJacket is een innovatieve bedrijfswebsite voor een fictieve onderneming die 
 ## Bestanden
 
 ```none
-├── index.html          # Hoofdpagina
-├── about.html          # Over Ons pagina
-├── concurrentie.html   # Concurrentieanalyse
-├── contact.html        # Contact pagina
+├── index.html
+├── about.html
+├── concurrentie.html
+├── contact.html
 ├── css/
-│   └── styles.css      # Aangepaste stijlen
+│   └── styles.css
 ├── js/
-│   └── script.js       # JavaScript functionaliteit
-├── media/
-│   ├── logo.svg        # Bedrijfslogo
-│   └── fonts/
-│       └── Itim-Regular.otf  # Aangepast lettertype
-└── package.json        # Project configuratie
+│   └── script.js
+└── media/
+    ├── logo.png
+    └── fonts/
+        └── Itim-Regular.otf
 ```
 
 ## Hoe te Gebruiken
