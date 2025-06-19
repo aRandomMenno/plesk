@@ -1,9 +1,10 @@
 <?php
 
 require "config.php";
+require "helpers/validatie.php";
 
 $id = $_GET["ID"] ?? null;
-$error = null;
+$fout = null;
 
 if (!$id || !is_numeric($id)) {
     header("Location: agenda.php");
@@ -11,34 +12,37 @@ if (!$id || !is_numeric($id)) {
 }
 
 if ($_POST) {
-    if (empty($_POST["titel"]) || empty($_POST["omschrijving"]) || empty($_POST["begin_datum"]) || empty($_POST["eind_datum"]) || !isset($_POST["prioriteit"]) || $_POST["prioriteit"] === "") {
-        $error = "Alle verplichte velden moeten worden ingevuld.";
+    $validatie = new AgendaValidatie();
+    $veilige_gegevens = $validatie->maakVeilig($_POST);
+    
+    if (!$validatie->valideerAgendaItem($veilige_gegevens)) {
+        $fout = $validatie->getFoutenAlsString();
     } else {
         try {
             $query = "UPDATE crud_agenda SET titel = :titel, omschrijving = :omschrijving, begin_datum = :begin_datum, eind_datum = :eind_datum, tags = :tags, prioriteit = :prioriteit, status = :status WHERE ID = :id";
             $stmt = $pdo->prepare($query);
-            $stmt->bindParam(":titel", $_POST["titel"]);
-            $stmt->bindParam(":omschrijving", $_POST["omschrijving"]);
-            $stmt->bindParam(":begin_datum", $_POST["begin_datum"]);
-            $stmt->bindParam(":eind_datum", $_POST["eind_datum"]);
+            $stmt->bindParam(":titel", $veilige_gegevens["titel"]);
+            $stmt->bindParam(":omschrijving", $veilige_gegevens["omschrijving"]);
+            $stmt->bindParam(":begin_datum", $veilige_gegevens["begin_datum"]);
+            $stmt->bindParam(":eind_datum", $veilige_gegevens["eind_datum"]);
             
-            $tags_value = $_POST["tags"] ?? "";
-            $stmt->bindParam(":tags", $tags_value);
-            $stmt->bindParam(":prioriteit", $_POST["prioriteit"], PDO::PARAM_INT);
-            $status_value = $_POST["status"] ?? "";
-            $stmt->bindParam(":status", $status_value);
+            $tags_waarde = $veilige_gegevens["tags"] ?? "";
+            $stmt->bindParam(":tags", $tags_waarde);
+            $stmt->bindParam(":prioriteit", $veilige_gegevens["prioriteit"], PDO::PARAM_INT);
+            $status_waarde = $veilige_gegevens["status"] ?? "";
+            $stmt->bindParam(":status", $status_waarde);
             $stmt->bindParam(":id", $id);
             $stmt->execute();
 
             if ($stmt->rowCount() === 0) {
-                $error = "Het agenda item kon niet worden bijgewerkt. Mogelijk bestaat het niet meer.";
+                $fout = "Het agenda item kon niet worden bijgewerkt. Mogelijk bestaat het niet meer.";
             } else {
                 header("Location: agenda.php");
                 exit;
             }
         } catch (PDOException $e) {
             error_log("Update failed: " . $e->getMessage());
-            $error = "Er is een fout opgetreden bij het bijwerken van het agenda item. Probeer het opnieuw.";
+            $fout = "Er is een fout opgetreden bij het bijwerken van het agenda item. Probeer het opnieuw.";
         }
     }
 }
@@ -58,7 +62,7 @@ try {
 
 } catch (PDOException $e) {
     error_log("Select query failed: " . $e->getMessage());
-    $error = "Er is een fout opgetreden bij het ophalen van het agenda item.";
+    $fout = "Er is een fout opgetreden bij het ophalen van het agenda item.";
 }
 
 include_once "views/agenda_aanpassen_view.php";

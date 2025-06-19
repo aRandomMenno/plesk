@@ -10,23 +10,23 @@
 
 <body>
     <?php
-    function formatDate($dateString) {
-        if (empty($dateString)) return "";
-        $date = new DateTime($dateString);
-        return $date->format("d-m-Y H:i");
+    function formateerDatum($datum_string) {
+        if (empty($datum_string)) return "";
+        $datum = new DateTime($datum_string);
+        return $datum->format("d-m-Y H:i");
     }
     ?>
 
     <div class="container mt-4">
         <h1 class="mb-4">Agenda Overzicht</h1>
 
-        <?php if (isset($error)) { ?>
+        <?php if (isset($fout)) { ?>
             <div class="alert alert-danger" role="alert">
-                <strong>Fout:</strong> <?= htmlspecialchars($error) ?>
+                <strong>Fout:</strong> <?= htmlspecialchars($fout) ?>
             </div>
         <?php } ?>
 
-        <?php if ($amountOfRows > 0) { ?>
+        <?php if ($aantal_rijen > 0) { ?>
             <div class="table-responsive">
                 <table class="table table-striped table-hover">
                     <thead class="table-dark">
@@ -43,30 +43,30 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($result as $row) { ?>
+                        <?php foreach ($resultaat as $rij) { ?>
                             <tr>
-                                <td><strong><?= htmlspecialchars($row["ID"]) ?></strong></td>
-                                <td><strong><?= htmlspecialchars($row["titel"]) ?></strong></td>
-                                <td><?= htmlspecialchars($row["omschrijving"]) ?></td>
-                                <td><?= formatDate($row["begin_datum"]) ?></td>
-                                <td><?= formatDate($row["eind_datum"]) ?></td>
+                                <td><strong><?= htmlspecialchars($rij["ID"]) ?></strong></td>
+                                <td><strong><?= htmlspecialchars($rij["titel"]) ?></strong></td>
+                                <td><?= htmlspecialchars($rij["omschrijving"]) ?></td>
+                                <td><?= formateerDatum($rij["begin_datum"]) ?></td>
+                                <td><?= formateerDatum($rij["eind_datum"]) ?></td>
 
                                 <?php 
-                                    $tags = !empty($row["tags"]) ? htmlspecialchars($row["tags"]) : "Geen tags";
-                                    $seperatedTags = explode(", ", $tags);
-                                    $formattedTags = array_map("trim", $seperatedTags);
-                                    $formattedTags = implode(", ", $formattedTags);
+                                    $tags = !empty($rij["tags"]) ? htmlspecialchars($rij["tags"]) : "Geen tags";
+                                    $gescheiden_tags = explode(", ", $tags);
+                                    $geformatteerde_tags = array_map("trim", $gescheiden_tags);
+                                    $geformatteerde_tags = implode(", ", $geformatteerde_tags);
                                 ?>
 
-                                <td><?= $formattedTags ?></td>
-                                <td><?= htmlspecialchars($row["prioriteit"] ?? "N/A") ?></td>
-                                <td><?= htmlspecialchars($row["status"] ?? "") ?></td>
+                                <td><?= $geformatteerde_tags ?></td>
+                                <td><?= htmlspecialchars($rij["prioriteit"] ?? "N/A") ?></td>
+                                <td><?= htmlspecialchars($rij["status"] ?? "") ?></td>
                                 <td>
-                                    <a href="./agenda_item.php?ID=<?= $row["ID"] ?>"
+                                    <a href="./agenda_item.php?ID=<?= $rij["ID"] ?>"
                                         class="btn btn-primary btn-sm me-1">Bekijken</a>
-                                    <a href="./agenda_aanpassen.php?ID=<?= $row["ID"] ?>"
+                                    <a href="./agenda_aanpassen.php?ID=<?= $rij["ID"] ?>"
                                         class="btn btn-primary btn-sm me-1">Bewerken</a>
-                                    <a href="./agenda_verwijderen.php?ID=<?= $row["ID"] ?>"
+                                    <a href="./agenda_verwijderen.php?ID=<?= $rij["ID"] ?>"
                                         class="btn btn-danger btn-sm">Verwijderen</a>
                                 </td>
                             </tr>

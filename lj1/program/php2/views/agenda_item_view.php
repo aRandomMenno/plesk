@@ -10,10 +10,10 @@
 
 <body>
     <?php
-    function formatDate($dateString) {
-        if (empty($dateString)) return "";
-        $date = new DateTime($dateString);
-        return $date->format("d-m-Y H:i");
+    function formateerDatum($datum_string) {
+        if (empty($datum_string)) return "";
+        $datum = new DateTime($datum_string);
+        return $datum->format("d-m-Y H:i");
     }
     ?>
 
@@ -25,9 +25,9 @@
                     <a href="agenda.php" class="btn btn-secondary">Terug naar overzicht</a>
                 </div>
 
-                <?php if (isset($error)) { ?>
+                <?php if (isset($fout)) { ?>
                     <div class="alert alert-danger" role="alert">
-                        <strong>Fout:</strong> <?= htmlspecialchars($error) ?>
+                        <strong>Fout:</strong> <?= htmlspecialchars($fout) ?>
                     </div>
                 <?php } ?>
 
@@ -73,7 +73,7 @@
                                         <label for="begin_datum" class="form-label">Begin Datum</label>
                                         <input type="text" class="form-control" id="begin_datum"
                                             name="begin_datum"
-                                            value="<?= formatDate($agenda_item["begin_datum"]) ?>" readonly>
+                                            value="<?= formateerDatum($agenda_item["begin_datum"]) ?>" readonly>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -81,7 +81,7 @@
                                         <label for="eind_datum" class="form-label">Eind Datum</label>
                                         <input type="text" class="form-control" id="eind_datum"
                                             name="eind_datum"
-                                            value="<?= formatDate($agenda_item["eind_datum"]) ?>" readonly>
+                                            value="<?= formateerDatum($agenda_item["eind_datum"]) ?>" readonly>
                                     </div>
                                 </div>
                             </div>
