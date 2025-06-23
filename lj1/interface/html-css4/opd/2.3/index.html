@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Bootstrap Layout Example</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Card Component</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Dit is een Bootstrap card component met header en body.</p>
+                        <a href="#" class="btn btn-primary">Lees meer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-3">
+                <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading">Alert Component</h4>
+                    <p>Dit is een Bootstrap alert component dat belangrijke informatie weergeeft.</p>
+                    <hr>
+                    <p class="mb-0">Perfect voor meldingen en waarschuwingen.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-3">
+                <div class="btn-group-vertical d-grid gap-2" role="group">
+                    <h5>Button Group</h5>
+                    <button type="button" class="btn btn-outline-primary">Eerste knop</button>
+                    <button type="button" class="btn btn-outline-secondary">Tweede knop</button>
+                    <button type="button" class="btn btn-outline-success">Derde knop</button>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="bg-light p-4 rounded">
+                    <h3 class="text-center">Tweede rij</h3>
+                    <p class="text-center mb-0">Deze rij bevat één kolom die de volledige breedte gebruikt.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>

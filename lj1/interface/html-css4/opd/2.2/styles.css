@@ -1,0 +1,50 @@
+.dark-green {
+    background-color: #2d5016;
+    color: white;
+}
+
+.yellow {
+    background-color: #ffeb3b;
+    color: black;
+}
+
+.light-blue {
+    background-color: #81d4fa;
+    color: black;
+}
+
+.purple {
+    background-color: #7b1fa2;
+    color: white;
+}
+
+.dark-grey {
+    background-color: #424242;
+    color: white;
+}
+
+.dark-blue {
+    background-color: #1565c0;
+    color: white;
+}
+
+.orange {
+    background-color: #ff9800;
+    color: black;
+}
+
+.grey {
+    background-color: #9e9e9e;
+    color: black;
+}
+
+.dark-red {
+    background-color: #c62828;
+    color: white;
+}
+
+[class*="col-"] {
+    /* padding: 15px; */
+    border: 1px solid #ddd;
+    min-height: 100px;
+}
