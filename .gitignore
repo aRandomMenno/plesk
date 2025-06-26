@@ -1,3 +1,4 @@
+# Generally ignored files
 *.txt
 *.git
 *.idea
@@ -11,6 +12,12 @@
 *.bak
 *.DS_Store
 
+# Ignore databases
+*.sqlite
+
 # Node modules
 /lj1/interface/html-css4/node_modules
 /lj1/program/php2/node_modules
+
+# Beroeps opdrachten
+/lj1/beroeps
